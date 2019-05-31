@@ -1,0 +1,39 @@
+//
+// Variables
+//
+@import "variables";
+
+//
+// Import needed Bootstrap Package Files
+//
+@import "../../../../../bootstrap_package/Resources/Public/Scss/Theme/theme";
+
+.extbase-debugger-floating {
+    margin-top: 100px;
+}
+
+//
+// extra frame background colors
+//
+.frame-background-red {
+    background-color: $red;
+}
+.frame-background-yellow {
+    background-color: $yellow;
+}
+.frame-background-green {
+    background-color: $green;
+}
+.frame-background-blue {
+    background-color: $blue;
+}
+
+//
+// Carousel
+//
+.carousel-item-type-call_to_action .carousel-box {
+    background-color: transparentize($white, 15%);
+    .carousel-item-header {
+        color: $primary;
+    }
+}

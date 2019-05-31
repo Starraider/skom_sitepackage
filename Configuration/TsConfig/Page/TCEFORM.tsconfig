@@ -1,0 +1,16 @@
+#
+# TCEFORM
+#
+TCEFORM {
+    pages {
+
+    }
+    tt_content {
+        background_color_class {
+            addItems.red = red
+            addItems.yellow = yellow
+            addItems.green = green
+            addItems.blue = blue
+        }
+    }
+}
