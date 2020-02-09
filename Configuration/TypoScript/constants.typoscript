@@ -3,6 +3,23 @@
 ######################
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:bootstrap_package/Configuration/TypoScript/constants.typoscript">
 
+##############################
+#### DEVELOPMENT SETTINGS ####
+##############################
+[applicationContext = Development*]
+    config.compressJs = 0
+    config.concatenateCss = 0
+    config.concatenateJs = 0
+    config.compressCss = 0
+    plugin.bootstrap_package.settings.cssSourceMapping = 1
+[end]
+[applicationContext = Production*]
+    config.compressJs = 1
+    config.concatenateCss = 1
+    config.concatenateJs = 1
+    config.compressCss = 1
+    plugin.bootstrap_package.settings.cssSourceMapping = 0
+[end]
 
 ############
 ### PAGE ###
