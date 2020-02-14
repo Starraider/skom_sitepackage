@@ -3,6 +3,37 @@
 ######################
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:bootstrap_package/Configuration/TypoScript/setup.typoscript">
 
+#############
+### Debug ###
+#############
+#plugin.tx_min.tinysource.enable = 1
+config {
+    debug = 0
+    no_cache = 0
+    admPanel = 0
+    contentObjectExceptionHandler = 1
+    compressCss = 1
+    concatenateCss = 1
+    compressJs = 1
+    concatenateJs = 1
+    sendCacheHeaders = 1
+    cache_period = 7776000
+}
+[applicationContext = Development]
+    #plugin.tx_min.tinysource.enable = 0
+    config {
+        debug = 1
+        no_cache = 1
+        admPanel = 0
+        contentObjectExceptionHandler = 0
+        compressCss = 0
+        concatenateCss = 0
+        compressJs = 0
+        concatenateJs = 0
+        sendCacheHeaders = 0
+        cache_period = 0
+    }
+[global]
 
 ##############
 #### PAGE ####
