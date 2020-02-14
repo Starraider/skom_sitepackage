@@ -37,3 +37,17 @@
         color: $primary;
     }
 }
+//
+// Footer
+//
+#page-footer {
+    .section-row {
+        .frame {
+            // kein extra Frame im Footer
+            .frame {
+                padding-top: 0;
+                padding-bottom: 0;
+            }
+        }
+    }
+}
