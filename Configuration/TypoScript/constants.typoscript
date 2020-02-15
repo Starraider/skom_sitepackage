@@ -67,11 +67,24 @@ plugin.bootstrap_package_contentelements {
     }
 }
 
+#############
+### Theme ###
+#############
+[treeLevel = 0]
+page.theme.navigation.style = default-transition
+[end]
+page.theme.navigation.type = top
+page.preloader.backgroundColor = #75A75A
+page.preloader.logo.file = fileadmin/introduction/images/introduction-package-inverted.svg
+# TODO: Was ist das?
+#page.theme.meta.enable = 0
+# TODO: In cookiebanner config auslagern
 
+page.theme.cookieconsent.enable = 0
 ################################
 ### BOOTSTRAP SCSS CONSTANTS ###
 ################################
 plugin.bootstrap_package.settings.scss {
-    primary = #eb3e4a
+    primary = #a60606
     secondary = #013859
 }
