@@ -7,17 +7,23 @@
 #### DEVELOPMENT SETTINGS ####
 ##############################
 [applicationContext = Development*]
+    config.no_cache = 1
+    config.sendCacheHeaders = 0
     config.compressJs = 0
     config.concatenateCss = 0
     config.concatenateJs = 0
     config.compressCss = 0
+    config.admPanel = 1
     plugin.bootstrap_package.settings.cssSourceMapping = 1
 [end]
 [applicationContext = Production*]
+    config.no_cache = 0
+    config.sendCacheHeaders = 1
     config.compressJs = 1
     config.concatenateCss = 1
     config.concatenateJs = 1
     config.compressCss = 1
+    config.admPanel = 0
     plugin.bootstrap_package.settings.cssSourceMapping = 0
 [end]
 
@@ -67,6 +73,16 @@ plugin.bootstrap_package_contentelements {
     }
 }
 
+###############
+### General ###
+###############
+config.headerComment = Based on skom_sitepackage by Sven Kalbhenn - https://www.skom.de/
+# TODO: Was ist das?
+#page.theme.meta.enable = 0
+
+# TODO: In cookiebanner config auslagern
+page.theme.cookieconsent.enable = 0
+
 #############
 ### Theme ###
 #############
@@ -76,15 +92,11 @@ page.theme.navigation.style = default-transition
 page.theme.navigation.type = top
 page.preloader.backgroundColor = #75A75A
 page.preloader.logo.file = fileadmin/introduction/images/introduction-package-inverted.svg
-# TODO: Was ist das?
-#page.theme.meta.enable = 0
-# TODO: In cookiebanner config auslagern
 
-page.theme.cookieconsent.enable = 0
 ################################
 ### BOOTSTRAP SCSS CONSTANTS ###
 ################################
 plugin.bootstrap_package.settings.scss {
     primary = #a60606
-    secondary = #013859
+    #secondary = $gray-600
 }
