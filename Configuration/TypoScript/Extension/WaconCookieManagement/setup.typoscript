@@ -1,0 +1,12 @@
+lib.cookieconsent = USER
+lib.cookieconsent {
+    userFunc = TYPO3\CMS\Extbase\Core\Bootstrap->run
+    pluginName = waconcookiemanagement_cookiefreigabe
+    extensionName = wacon_cookie_management
+    vendorName    = Waconcookiemanagement
+    switchableControllerActions {
+        Cookiefreigabe {
+            1 = list
+          }
+    }
+}
