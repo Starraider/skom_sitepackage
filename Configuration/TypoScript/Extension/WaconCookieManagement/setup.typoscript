@@ -19,4 +19,4 @@ lib.cookieconsent {
         recursive = 3
     }
 }
-// Verwendung in fluid: <f:cobject typoscriptobjectpath="lib.cookieconsent">
+// Verwendung in fluid: <f:cobject typoscriptObjectPath="lib.cookieconsent">
