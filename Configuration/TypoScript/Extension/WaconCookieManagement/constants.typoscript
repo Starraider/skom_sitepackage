@@ -1,0 +1,12 @@
+plugin.tx_waconcookiemanagement_cookiefreigabe {
+    settings {
+        # cat=plugin.tx_waconcookiemanagement_cookiefreigabe/settings; type=string; label=pID of the imprint page
+        imprint = 91
+        # cat=plugin.tx_waconcookiemanagement_cookiefreigabe/settings; type=string; label=pID of the data protection page
+        dataProtection = 92
+        # cat=plugin.tx_waconcookiemanagement_cookiefreigabe/settings; type=string; label=pID where the cookies are stored
+        pages = 89
+        # cat=plugin.tx_waconcookiemanagement_cookiefreigabe/settings; type=string; label=recursive level, how deep the cookies should be searched for
+        recursive = 3
+    }
+}

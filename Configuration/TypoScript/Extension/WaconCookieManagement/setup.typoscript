@@ -13,10 +13,10 @@ lib.cookieconsent {
     settings < plugin.tx_waconcookiemanagement_cookiefreigabe
     settings {
         nurLink = 0
-        imprint = 91
-        dataProtection = 92
-        pages = 89
-        recursive = 3
+        imprint = {plugin.tx_waconcookiemanagement_cookiefreigabe.settings.imprint}
+        dataProtection = {plugin.tx_waconcookiemanagement_cookiefreigabe.settings.dataProtection}
+        pages = {plugin.tx_waconcookiemanagement_cookiefreigabe.settings.pages}
+        recursive = {plugin.tx_waconcookiemanagement_cookiefreigabe.settings.recursive}
     }
 }
 // Verwendung in fluid: <f:cobject typoscriptObjectPath="lib.cookieconsent">
