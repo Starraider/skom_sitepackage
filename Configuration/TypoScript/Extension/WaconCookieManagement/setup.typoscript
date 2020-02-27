@@ -1,4 +1,9 @@
 
+page.includeJS{
+    // No extra jquery
+    ajquery >
+}
+
 lib.cookieconsent = USER
 lib.cookieconsent {
     userFunc = TYPO3\CMS\Extbase\Core\Bootstrap->run
