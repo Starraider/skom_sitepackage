@@ -21,6 +21,9 @@
     config.concatenateJs = 0
     config.compressCss = 0
     config.admPanel = 1
+    sourceopt.formatHtml = 1
+    sourceopt.removeComments = 0
+    plugin.tx_min.tinysource.enable = 0
     plugin.bootstrap_package.settings.cssSourceMapping = 1
 [end]
 [applicationContext = Production*]
@@ -31,6 +34,9 @@
     config.concatenateJs = 1
     config.compressCss = 1
     config.admPanel = 0
+    sourceopt.formatHtml = 4
+    sourceopt.removeComments = 1
+    plugin.tx_min.tinysource.enable = 1
     plugin.bootstrap_package.settings.cssSourceMapping = 0
 [end]
 
@@ -84,6 +90,7 @@ plugin.bootstrap_package_contentelements {
 ### General ###
 ###############
 config.headerComment = Based on skom_sitepackage by Sven Kalbhenn - https://www.skom.de/
+sourceopt.headerComment = Based on skom_sitepackage by Sven Kalbhenn - https://www.skom.de/
 # TODO: Was ist das?
 #page.theme.meta.enable = 0
 
