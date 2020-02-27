@@ -65,3 +65,59 @@ page {
         skom_sitepackage_scripts = EXT:skom_sitepackage/Resources/Public/JavaScript/Dist/scripts.js
     }
 }
+
+######################################
+#### Enable High Resolution Images ###
+######################################
+lib.contentElement.settings.responsiveimages.variants {
+    default {
+        sizes {
+            1\.5x {
+                multiplier = 1.5
+            }
+            2x {
+                multiplier = 2
+            }
+        }
+    }
+    large {
+        sizes {
+            1\.5x {
+                multiplier = 1.5
+            }
+            2x {
+                multiplier = 2
+            }
+        }
+    }
+    medium {
+        sizes {
+            1\.5x {
+                multiplier = 1.5
+            }
+            2x {
+                multiplier = 2
+            }
+        }
+    }
+    small {
+        sizes {
+            1\.5x {
+                multiplier = 1.5
+            }
+            2x {
+                multiplier = 2
+            }
+        }
+    }
+    extrasmall {
+        sizes {
+            1\.5x {
+                multiplier = 1.5
+            }
+            2x {
+                multiplier = 2
+            }
+        }
+    }
+}
