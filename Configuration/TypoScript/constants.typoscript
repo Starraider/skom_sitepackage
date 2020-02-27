@@ -3,6 +3,13 @@
 ######################
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:bootstrap_package/Configuration/TypoScript/constants.typoscript">
 
+#############################################################
+#### EXTENSIONS                                          ####
+#### Manual inclusion to keep control over loading order ####
+#############################################################
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:skom_sitepackage/Configuration/TypoScript/Extension/WaconCookieManagement/constants.typoscript"  condition="userFunc = TYPO3\\CMS\\Core\\Utility\\ExtensionManagementUtility::isLoaded('wacon_cookie_management')">
+
+
 ##############################
 #### DEVELOPMENT SETTINGS ####
 ##############################

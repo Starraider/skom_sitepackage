@@ -8,8 +8,13 @@
 //
 @import "../../../../../bootstrap_package/Resources/Public/Scss/Theme/theme";
 
+//
+// Extensions
+//
+@import "waconcookiemanagement";
+
 .extbase-debugger-floating {
-    margin-top: 100px;
+    margin-top: 150px;
 }
 
 //
