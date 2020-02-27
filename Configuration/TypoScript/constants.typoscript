@@ -21,7 +21,7 @@
     config.concatenateJs = 0
     config.compressCss = 0
     config.admPanel = 1
-    sourceopt.formatHtml = 1
+    sourceopt.formatHtml = 4
     sourceopt.removeComments = 0
     plugin.tx_min.tinysource.enable = 0
     plugin.bootstrap_package.settings.cssSourceMapping = 1
@@ -34,7 +34,7 @@
     config.concatenateJs = 1
     config.compressCss = 1
     config.admPanel = 0
-    sourceopt.formatHtml = 4
+    sourceopt.formatHtml = 1
     sourceopt.removeComments = 1
     plugin.tx_min.tinysource.enable = 1
     plugin.bootstrap_package.settings.cssSourceMapping = 0
