@@ -1,0 +1,22 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:if condition="{theme.language.enable}">
+    <f:for each="{languagenavigation}" as="item">
+        <f:if condition="{item.active}">
+            <f:else>
+                <li class="nav-item language-menu-item {f:if(condition: item.available, else: 'text-muted')}">
+                    <f:if condition="{item.available}">
+                        <f:then>
+                            <a href="{item.link}" class="nav-link" hreflang="{item.hreflang}" title="{item.title}">
+                                <f:image src="EXT:skom_sitepackage/Resources/Public/Icons/Flags/{item.hreflang}.svg" alt="{item.navigationTitle} Version" width="20" height="15" />
+                            </a>
+                        </f:then>
+                        <f:else>
+                            <f:image src="EXT:skom_sitepackage/Resources/Public/Icons/Flags/{item.hreflang}_grey.svg" alt="{item.navigationTitle} Version" width="20" height="15" />
+                        </f:else>
+                    </f:if>
+                </li>
+            </f:else>
+        </f:if>
+    </f:for>
+</f:if>
+</html>

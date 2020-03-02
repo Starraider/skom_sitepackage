@@ -37,6 +37,14 @@
     padding-bottom: 2.5rem;
 }
 
+#mainnavigation {
+    .language-menu-item {
+        a {
+            margin-top: 4px;
+        }
+    }
+}
+#mainnavigation > ul:nth-child(2) > li.nav-item.language-menu-item > a > img
 //
 // Carousel
 //
