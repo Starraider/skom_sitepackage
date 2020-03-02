@@ -39,8 +39,13 @@
 
 #mainnavigation {
     .language-menu-item {
-        a {
+        img {
             margin-top: 4px;
+        }
+        &.text-muted {
+            img {
+                margin-top: 10px;
+            }
         }
     }
 }
