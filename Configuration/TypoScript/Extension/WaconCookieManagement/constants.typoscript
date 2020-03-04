@@ -1,3 +1,15 @@
+page {
+    theme {
+        waconcookiemanagement {
+            # cat=bootstrap package: cookie consent/230/01_enable; type=boolean; label=Enable Wacon Cookie Management
+            enable = 0
+        }
+    }
+}
+[userFunc = TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('wacon_cookie_management')]
+    page.theme.waconcookiemanagement.enable = 1
+[global]
+
 plugin.tx_waconcookiemanagement_cookiefreigabe {
     settings {
         # cat=plugin.tx_waconcookiemanagement_cookiefreigabe/settings; type=string; label=pID of the imprint page

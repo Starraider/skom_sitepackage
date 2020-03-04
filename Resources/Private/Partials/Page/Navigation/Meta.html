@@ -8,9 +8,11 @@
                 </a>
             </li>
         </f:for>
-        <li>
-            <f:cobject typoscriptObjectPath="lib.cookieconsent"></f:cobject>
-        </li>
+        <f:if condition="{theme.waconcookiemanagement.enable}">
+            <li>
+                <f:cobject typoscriptObjectPath="lib.cookieconsent"></f:cobject>
+            </li>
+        </f:if>
     </ul>
 </f:if>
 </html>
