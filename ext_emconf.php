@@ -28,5 +28,5 @@ $EM_CONF[$_EXTKEY] = [
     'author' => 'Sven Kalbhenn',
     'author_email' => 'sven@skom.de',
     'author_company' => 'SKom',
-    'version' => '1.0.0',
+    'version' => '1.1.0',
 ];
