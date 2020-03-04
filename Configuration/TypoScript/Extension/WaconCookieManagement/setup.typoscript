@@ -1,12 +1,27 @@
+
+page.includeJS{
+    // No extra jquery
+    ajquery >
+}
+
 lib.cookieconsent = USER
 lib.cookieconsent {
     userFunc = TYPO3\CMS\Extbase\Core\Bootstrap->run
-    pluginName = waconcookiemanagement_cookiefreigabe
-    extensionName = wacon_cookie_management
     vendorName    = Waconcookiemanagement
+    extensionName = WaconCookieManagement
+    pluginName = Cookiefreigabe
     switchableControllerActions {
-        Cookiefreigabe {
+        Cookie {
             1 = list
           }
     }
+    settings < plugin.tx_waconcookiemanagement_cookiefreigabe
+    settings {
+        nurLink = 0
+        imprint = {plugin.tx_waconcookiemanagement_cookiefreigabe.settings.imprint}
+        dataProtection = {plugin.tx_waconcookiemanagement_cookiefreigabe.settings.dataProtection}
+    }
+    persistence.storagePid = {$plugin.tx_waconcookiemanagement_cookiefreigabe.persistence.storagePid}
+    persistence.recursive = {$plugin.tx_waconcookiemanagement_cookiefreigabe.persistence.recursive}
 }
+// Verwendung in fluid: <f:cobject typoscriptObjectPath="lib.cookieconsent">

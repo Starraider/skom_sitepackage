@@ -1,0 +1,11 @@
+.cookie-set.script {
+    background: transparent;
+    img {
+        @extend .img-fluid;
+    }
+}
+.tx-wacon-cookie-management {
+    .cookie-set {
+        @extend a;
+    }
+}
