@@ -9,7 +9,6 @@
 #############################################################
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:skom_sitepackage/Configuration/TypoScript/Extension/WaconCookieManagement/constants.typoscript"  condition="userFunc = TYPO3\\CMS\\Core\\Utility\\ExtensionManagementUtility::isLoaded('wacon_cookie_management')">
 
-
 ##############################
 #### DEVELOPMENT SETTINGS ####
 ##############################
@@ -62,7 +61,6 @@ page {
     }
 }
 
-
 ##################
 ### EXTENSIONS ###
 ##################
@@ -73,7 +71,6 @@ plugin.bootstrap_package {
         templateRootPath = EXT:skom_sitepackage/Resources/Private/Templates/
     }
 }
-
 
 ########################
 ### CONTENT ELEMENTS ###

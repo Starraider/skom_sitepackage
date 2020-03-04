@@ -56,6 +56,24 @@ config {
 #### PAGE ####
 ##############
 page {
+    10 = FLUIDTEMPLATE
+    10 {
+        templateRootPaths {
+            0 = EXT:bootstrap_package/Resources/Private/Templates/Page/
+            1 = EXT:skom_sitepackage/Resources/Private/Templates/Page/
+            2 = {$page.fluidtemplate.templateRootPath}
+        }
+        partialRootPaths {
+            0 = EXT:bootstrap_package/Resources/Private/Partials/Page/
+            1 = EXT:skom_sitepackage/Resources/Private/Partials/Page/
+            2 = {$page.fluidtemplate.partialRootPath}
+        }
+        layoutRootPaths {
+            0 = EXT:bootstrap_package/Resources/Private/Layouts/Page/
+            1 = EXT:skom_sitepackage/Resources/Private/Layouts/Page/
+            2 = {$page.fluidtemplate.layoutRootPath}
+        }
+    }
     includeCSS {
         theme = EXT:skom_sitepackage/Resources/Public/Scss/Theme/theme.scss
     }
@@ -127,6 +145,7 @@ page {
         waconcookiemanagement >
     }
 }
+
 
 ######################################
 #### Enable High Resolution Images ###
