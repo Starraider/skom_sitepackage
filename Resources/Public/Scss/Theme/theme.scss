@@ -32,7 +32,24 @@
 .frame-background-blue {
     background-color: $blue;
 }
+.frame {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+}
 
+#mainnavigation {
+    .language-menu-item {
+        img {
+            margin-top: 4px;
+        }
+        &.text-muted {
+            img {
+                margin-top: 10px;
+            }
+        }
+    }
+}
+#mainnavigation > ul:nth-child(2) > li.nav-item.language-menu-item > a > img
 //
 // Carousel
 //

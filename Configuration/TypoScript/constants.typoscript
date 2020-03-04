@@ -113,4 +113,12 @@ page.preloader.logo.file = fileadmin/introduction/images/introduction-package-in
 plugin.bootstrap_package.settings.scss {
     primary = #a60606
     secondary = #2b2b2b
+    body-color = #58585a
+    blue = #61B2D4
+    red = #d4003c
+    orange = #ee9200
+    green = #9CB502
+    yellow = #F4D733
+    black = #222222
+    white = #ffffff
 }
