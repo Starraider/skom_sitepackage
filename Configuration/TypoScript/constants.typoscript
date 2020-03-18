@@ -118,4 +118,5 @@ plugin.bootstrap_package.settings.scss {
     yellow = #F4D733
     black = #222222
     white = #ffffff
+    footer-sections = (content:(background: $secondary, color: $white, link-color: $link-color), meta:(background: $body-bg, color: $body-color, link-color: $link-color))
 }
