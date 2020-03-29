@@ -7,8 +7,8 @@ If you have any questions about this project or just want to talk:
 Send me a message sven@skom.de
 
 ## Dependency:
-- typo3 > 8.7.0
-- bootstrap_package: > 10.0.0
+- typo3 > 9.5.0
+- bootstrap_package: > 11.0.0
 
 ## Supported extensions
 - news > 7.3.0
