@@ -20,20 +20,3 @@ $headline-scaling: map-merge((
         lg: 1,
         xl: 1
 ), $headline-scaling);
-
-//
-// Footer
-//
-$footer-sections: ();
-$footer-sections: map-merge((
-        content: (
-                background:                $secondary,
-                color:                     $white,
-                link-color:                $link-color
-        ),
-        meta: (
-                background:                $body-bg,
-                color:                     $body-color,
-                link-color:                $link-color
-        )
-), $footer-sections);
