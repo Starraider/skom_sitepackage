@@ -101,8 +101,6 @@ page.theme.cookieconsent.enable = 0
 page.theme.navigation.style = default-transition
 [end]
 page.theme.navigation.type = top
-page.preloader.backgroundColor = #75A75A
-page.preloader.logo.file = fileadmin/introduction/images/introduction-package-inverted.svg
 
 ################################
 ### BOOTSTRAP SCSS CONSTANTS ###
@@ -120,3 +118,5 @@ plugin.bootstrap_package.settings.scss {
     white = #ffffff
     footer-sections = (content:(background: $secondary, color: $white, link-color: $link-color), meta:(background: $body-bg, color: $body-color, link-color: $link-color))
 }
+page.preloader.logo.file = EXT:bootstrap_package/Resources/Public/Images/Icons/Ionicons/android-timer.svg
+page.preloader.backgroundColor = #eeeeee
