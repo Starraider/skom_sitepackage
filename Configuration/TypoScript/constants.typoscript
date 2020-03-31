@@ -52,6 +52,11 @@ page {
         #meta.enable = 0
         # TODO: In cookiebanner config auslagern
         cookieconsent.enable = 0
+        googleFont {
+            enable = 1
+            font = Gudea
+            300,400,700
+        }
     }
     logo {
         file = EXT:skom_sitepackage/Resources/Public/Images/logo.svg
@@ -115,10 +120,7 @@ page.theme.navigation.type = top
 ### BOOTSTRAP SCSS CONSTANTS ###
 ################################
 plugin.bootstrap_package.settings.scss {
-    primary = #a60606
-    secondary = #2b2b2b
-    body-color = #58585a
-    link-color = $primary
+    ### colors ###
     blue = #61B2D4
     red = #d4003c
     orange = #ee9200
@@ -126,6 +128,41 @@ plugin.bootstrap_package.settings.scss {
     yellow = #F4D733
     black = #222222
     white = #ffffff
-    footer-sections = (content:(background: $secondary, color: $white, link-color: $link-color), meta:(background: $body-bg, color: $body-color, link-color: $link-color))
+
+    primary = #a60606
+    secondary = #701B11
+    body-bg = $white
+    body-color = #58585a
+    link-color = $secondary
+    link-alternate-color
+    footer-sections = (content:(background: $primary, color: $body-color, link-color: $link-color), meta:(background: $body-bg, color: $body-color, link-color: $link-color))
+
+    ### Fonts ###
+    font-family-sans-serif = -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"
+    font-family-base = $font-family-sans-serif
+    font-size-base = 1rem
+
+    ### Headings ###
+    headings-font-family = "#{$google-webfont}", sans-serif
+    headings-color = $secondary
+    headings-font-weight = 400
+    h1-font-size = $font-size-base * 2.5
+    h2-font-size = $font-size-base * 1.8
+    h3-font-size = $font-size-base * 1.5
+    h4-font-size = $font-size-base * 1.2
+    h5-font-size = $font-size-base * 1
+
+    ### Navbar ###
+    # Background Color is set via "bg-primary" class in html
+    navbar-brand-padding-y = 0.5rem
+    navbar-nav-link-padding-x = 1rem
+    navbar-padding-x = $spacer
+    navbar-padding-y = $spacer /2
+
+    navbar-light-color = $secondary
+    navbar-light-active-color = $secondary
+    navbar-light-hover-color = $secondary
+
+    print-page-size = a4
 }
 
