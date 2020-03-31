@@ -40,6 +40,9 @@
 //
 // Main Navigation
 //
+.navbar-inverse {
+    background-color: $primary !important;
+}
 .navbar-mainnavigation {
     .navbar-brand-image {
         padding-top: 0;
