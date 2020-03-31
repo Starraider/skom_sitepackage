@@ -43,6 +43,16 @@
 ### PAGE ###
 ############
 page {
+    theme {
+        navigation.style = default
+        meta.navigationValue = 4,5
+        copyright.text = &copy; 2020 Sven Kalbhenn
+        language.enable = 1
+        # TODO: Was ist das?
+        #meta.enable = 0
+        # TODO: In cookiebanner config auslagern
+        cookieconsent.enable = 0
+    }
     logo {
         file = EXT:skom_sitepackage/Resources/Public/Images/logo.svg
         fileInverted = EXT:skom_sitepackage/Resources/Public/Images/logo-inverted.svg
@@ -53,6 +63,10 @@ page {
     }
     favicon {
         file = EXT:skom_sitepackage/Resources/Public/Icons/favicon.ico
+    }
+    preloader {
+        logo.file = EXT:bootstrap_package/Resources/Public/Images/Icons/Ionicons/android-timer.svg
+        backgroundColor = #eeeeee
     }
     fluidtemplate {
         layoutRootPath = EXT:skom_sitepackage/Resources/Private/Layouts/Page/
@@ -88,11 +102,6 @@ plugin.bootstrap_package_contentelements {
 ###############
 config.headerComment = Based on skom_sitepackage by Sven Kalbhenn - https://www.skom.de/
 sourceopt.headerComment = Based on skom_sitepackage by Sven Kalbhenn - https://www.skom.de/
-# TODO: Was ist das?
-#page.theme.meta.enable = 0
-
-# TODO: In cookiebanner config auslagern
-page.theme.cookieconsent.enable = 0
 
 #############
 ### Theme ###
@@ -109,6 +118,7 @@ plugin.bootstrap_package.settings.scss {
     primary = #a60606
     secondary = #2b2b2b
     body-color = #58585a
+    link-color = $primary
     blue = #61B2D4
     red = #d4003c
     orange = #ee9200
@@ -118,5 +128,4 @@ plugin.bootstrap_package.settings.scss {
     white = #ffffff
     footer-sections = (content:(background: $secondary, color: $white, link-color: $link-color), meta:(background: $body-bg, color: $body-color, link-color: $link-color))
 }
-page.preloader.logo.file = EXT:bootstrap_package/Resources/Public/Images/Icons/Ionicons/android-timer.svg
-page.preloader.backgroundColor = #eeeeee
+
