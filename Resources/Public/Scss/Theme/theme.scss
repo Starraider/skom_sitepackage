@@ -13,6 +13,7 @@
 //
 @import "waconcookiemanagement";
 
+// Debugger
 .extbase-debugger-floating {
     margin-top: 150px;
 }
@@ -36,7 +37,15 @@
     padding-top: 2.5rem;
     padding-bottom: 2.5rem;
 }
-
+//
+// Main Navigation
+//
+.navbar-mainnavigation {
+    .navbar-brand-image {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+ }
 #mainnavigation {
     .language-menu-item {
         img {
@@ -48,8 +57,9 @@
             }
         }
     }
+
 }
-#mainnavigation > ul:nth-child(2) > li.nav-item.language-menu-item > a > img
+// #mainnavigation > ul:nth-child(2) > li.nav-item.language-menu-item > a > img
 //
 // Carousel
 //
