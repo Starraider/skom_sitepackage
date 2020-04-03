@@ -55,7 +55,7 @@ page {
         googleFont {
             enable = 1
             font = Gudea
-            300,400,700
+            weight = 300,400,700
         }
     }
     logo {
@@ -145,7 +145,7 @@ plugin.bootstrap_package.settings.scss {
     body-bg = $white
     body-color = #58585a
     link-color = $secondary
-    link-alternate-color
+    link-alternate-color = darken($secondary, 20%)
     footer-sections = (content:(background: $primary, color: $body-color, link-color: $link-color), meta:(background: $body-bg, color: $body-color, link-color: $link-color))
 
     ### Fonts ###
@@ -165,6 +165,7 @@ plugin.bootstrap_package.settings.scss {
 
     ### Navbar ###
     # Background Color is set via "bg-primary" class in html
+    #navbar-heights = (lg: 200px, xl: 125px)
     navbar-brand-padding-y = 0.5rem
     navbar-nav-link-padding-x = 1rem
     navbar-padding-x = $spacer
