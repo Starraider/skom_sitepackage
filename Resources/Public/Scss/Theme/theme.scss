@@ -86,3 +86,31 @@
         }
     }
 }
+
+//
+// Layout
+//
+.frame-type-textpic {
+    &.frame-layout-1 {
+        .textpic-left, .textpic-right {
+            width: unset;
+            .textpic-gallery {
+                width: 33%;
+            }
+            .textpic-text {
+                width: 66%;
+            }
+        }
+    }
+    &.frame-layout-2 {
+        .textpic-left, .textpic-right {
+            width: unset;
+            .textpic-gallery {
+                width: 66%;
+            }
+            .textpic-text {
+                width: 33%;
+            }
+        }
+    }
+}

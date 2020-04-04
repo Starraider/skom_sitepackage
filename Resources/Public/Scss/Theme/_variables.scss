@@ -20,3 +20,32 @@ $headline-scaling: map-merge((
         lg: 1,
         xl: 1
 ), $headline-scaling);
+
+//
+// Frame Inner Spacing
+//
+$frame-inner-spacing:         2rem !default;
+$frame-inner-spacing-scaling: () !default;
+$frame-inner-spacing-scaling: map-merge(
+    (
+        xs: 1,
+        sm: 1.25,
+        md: 1.5,
+        lg: 1.75,
+        xl: 1.75
+    ),
+    $frame-inner-spacing-scaling
+);
+//
+// Subnav
+//
+$subnav-font-size:            $font-size-base * .875 !default;
+$subnav-line-height:          1.25 !default;
+$subnav-link-padding-x:       1rem !default;
+$subnav-link-padding-y:       .5rem !default;
+$subnav-border-color:         #e6e6e6 !default;
+$subnav-color:                rgba($black, .5) !default;
+$subnav-hover-color:          rgba($black, .7) !default;
+$subnav-hover-bg:             #f2f2f2 !default;
+$subnav-active-color:         $link-color !default;
+$subnav-active-bg:            transparent !default;
