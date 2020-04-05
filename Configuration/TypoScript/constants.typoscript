@@ -142,10 +142,17 @@ plugin.bootstrap_package.settings.scss {
 
     primary = #a60606
     secondary = #701B11
+
     body-bg = $white
     body-color = #58585a
+
     link-color = $secondary
-    link-alternate-color = darken($secondary, 20%)
+    link-decoration = none
+    link-hover-color = darken($secondary, 5%)
+    link-hover-decoration = underline
+
+    #link-alternate-color = darken($secondary, 20%)
+
     footer-sections = (content:(background: $primary, color: $body-color, link-color: $link-color), meta:(background: $body-bg, color: $body-color, link-color: $link-color))
 
     ### Fonts ###
@@ -157,14 +164,15 @@ plugin.bootstrap_package.settings.scss {
     headings-font-family = "#{$google-webfont}", sans-serif
     headings-color = $secondary
     headings-font-weight = 400
-    h1-font-size = $font-size-base * 2.5
+    headings-margin-bottom = $spacer / 2
+    h1-font-size = $font-size-base * 1.5
     h2-font-size = $font-size-base * 1.8
     h3-font-size = $font-size-base * 1.5
     h4-font-size = $font-size-base * 1.2
     h5-font-size = $font-size-base * 1
 
     ### Navbar ###
-    # Background Color is set via "bg-primary" class in html
+    # Background Color is set vin the theme.scss
     #navbar-heights = (lg: 200px, xl: 125px)
     navbar-brand-padding-y = 0.5rem
     navbar-nav-link-padding-x = 1rem
