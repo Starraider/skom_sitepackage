@@ -153,7 +153,7 @@ plugin.bootstrap_package.settings.scss {
 
     #link-alternate-color = darken($secondary, 20%)
 
-    footer-sections = (content:(background: $primary, color: $body-color, link-color: $link-color), meta:(background: $body-bg, color: $body-color, link-color: $link-color))
+    footer-sections = (content:(background: $gray-200, color: $body-color, link-color: $link-color), meta:(background: $body-bg, color: $body-color, link-color: $link-color))
 
     ### Fonts ###
     font-family-sans-serif = -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"
