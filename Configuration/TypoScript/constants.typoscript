@@ -7,7 +7,8 @@
 #### EXTENSIONS                                          ####
 #### Manual inclusion to keep control over loading order ####
 #############################################################
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:skom_sitepackage/Configuration/TypoScript/Extension/WaconCookieManagement/constants.typoscript">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:skom_sitepackage/Configuration/TypoScript/Extension/WaconCookieManagement/constants.typoscript" condition="extension.isLoaded('wacon_cookie_management') == 1">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:skom_sitepackage/Configuration/TypoScript/Extension/News/constants.typoscript" condition="extension.isLoaded('news') == 1">
 
 ##############################
 #### DEVELOPMENT SETTINGS ####
