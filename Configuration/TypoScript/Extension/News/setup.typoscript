@@ -1,0 +1,21 @@
+plugin.tx_news {
+    view {
+        templateRootPaths {
+            0 = EXT:news/Resources/Private/Templates/
+            1 = {$plugin.tx_news.view.templateRootPath.0}
+            100 = {$plugin.tx_news.view.templateRootPath.1}
+        }
+        partialRootPaths {
+            0 = EXT:news/Resources/Private/Partials/
+            1 = {$plugin.tx_news.view.partialRootPath.0}
+            100 = {$plugin.tx_news.view.partialRootPath.1}
+        }
+        layoutRootPaths {
+            0 = EXT:news/Resources/Private/Layouts/
+            1 = {$plugin.tx_news.view.layoutRootPath.0}
+            100 = {$plugin.tx_news.view.layoutRootPath.1}
+        }
+        //widget.GeorgRinger\News\ViewHelpers\Widget\PaginateViewHelper.templateRootPath = EXT:news/Resources/Private/Templates/
+
+    }
+}

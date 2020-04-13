@@ -1,0 +1,11 @@
+tx_news.templateLayouts {
+    1 =  --div--,List-View
+    2 = Bild links
+    3 = Bild rechts
+    4 = Bild oben
+    5 = ohne Bild
+    6 = Cards
+    7 =  --div--,Detail-View
+    8 = Carousel
+    9 = Galerie
+}
