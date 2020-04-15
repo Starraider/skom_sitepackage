@@ -18,4 +18,29 @@ plugin.tx_news {
         //widget.GeorgRinger\News\ViewHelpers\Widget\PaginateViewHelper.templateRootPath = EXT:news/Resources/Private/Templates/
 
     }
+    settings {
+        cssFile >
+        displayDummyIfNoMedia = 0
+        detail {
+            showSocialShareButtons = 0
+            media.image.maxWidth = 550
+            media.image.maxHeight = 800
+            media.video.width = 550
+
+        }
+    }
+    _LOCAL_LANG {
+        default {
+            more-link = more >>
+            back-link = << back
+            dateFormat = Y-m-d
+        }
+        de {
+            more-link = mehr >>
+            back-link = << zurück
+            dateFormat = d.m.Y
+            related-news = Weitere Nachrichten
+        }
+    }
 }
+
