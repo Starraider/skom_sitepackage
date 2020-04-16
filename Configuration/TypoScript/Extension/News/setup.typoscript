@@ -23,10 +23,20 @@ plugin.tx_news {
         displayDummyIfNoMedia = 0
         detail {
             showSocialShareButtons = 0
-            media.image.maxWidth = 550
-            media.image.maxHeight = 800
-            media.video.width = 550
-
+            media {
+                image {
+                    maxWidth = 550
+                    maxHeight = 800
+                    lightbox {
+                        enabled = 1
+                        class = {$plugin.bootstrap_package_contentelements.lightbox.cssClass}
+                        width = {$plugin.bootstrap_package_contentelements.lightbox.image.maxWidth}
+                        height = {$plugin.bootstrap_package_contentelements.lightbox.image.maxHeight}
+                        rel = {$plugin.bootstrap_package_contentelements.lightbox.prefix}
+                    }
+                }
+                video.width = 550
+            }
         }
     }
     _LOCAL_LANG {
@@ -43,4 +53,3 @@ plugin.tx_news {
         }
     }
 }
-
