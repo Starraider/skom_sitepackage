@@ -84,6 +84,10 @@ page {
         modernizr = EXT:bootstrap_package/Resources/Public/Contrib/modernizr/modernizr.min.js
         modernizr.forceOnTop = 1
         modernizr.async = 1
+        klaro_config = EXT:skom_sitepackage/Resources/Public/JavaScript/Dist/config.js
+        klaro_config.defer = 1
+        klaro = EXT:skom_sitepackage/Resources/Public/JavaScript/Dist/klaro.js
+        klaro.defer = 1
         jquery = EXT:bootstrap_package/Resources/Public/Contrib/jquery/jquery.min.js
         jquery.defer = 1
         popper = EXT:bootstrap_package/Resources/Public/Contrib/popper/popper.min.js
@@ -114,8 +118,8 @@ page {
         bootstrap_lightbox.defer = 1
         bootstrap_navbar = EXT:bootstrap_package/Resources/Public/JavaScript/Dist/bootstrap.navbar.min.js
         bootstrap_navbar.defer = 1
-        waconcookiemanagement = EXT:wacon_cookie_management/Resources/Public/JavaScript/waconcookiemanagement.js
-        waconcookiemanagement.defer = 1
+        #waconcookiemanagement = EXT:wacon_cookie_management/Resources/Public/JavaScript/waconcookiemanagement.js
+        #waconcookiemanagement.defer = 1
     }
 
     includeJS {
