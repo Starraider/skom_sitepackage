@@ -1,9 +1,5 @@
 .news-list-item {
     margin-bottom: 2rem;
-    .news-information {
-        @extend .small;
-        margin-bottom: .5rem;
-    }
     .news-list-image {
         .news-image {
             @extend .img-fluid;
@@ -73,4 +69,49 @@
             @extend .news-list-article;
         }
     }
+}
+.news-single {
+    .news-detail-image {
+        .thumbnail {
+            margin-bottom: 1.5rem;
+            .caption {
+                @extend .small;
+                background-color: $gray-200;
+                padding: .3rem;
+            }
+        }
+        &--right {
+            @extend .col-md-4;
+        }
+        &--left {
+            @extend .col-md-4;
+        }
+    }
+    .news-detail-article {
+        &--left {
+            @extend .col-md-8;
+        }
+        &--right {
+            @extend .col-md-8;
+        }
+    }
+    .news-backlink {
+        @extend .btn;
+        @extend .btn-default;
+        @extend .btn-sm;
+        margin-bottom: 2rem;
+    }
+    .lead {
+        background-color: $gray-200;
+        font-size: $font-size-base;
+        padding: 1rem;
+        margin-bottom: 1rem;
+        p {
+            margin: 0;
+        }
+    }
+}
+.news-information {
+    @extend .small;
+    margin-bottom: .5rem;
 }
