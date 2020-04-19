@@ -46,6 +46,17 @@
                 <f:if condition="{settings.templateLayout} == 20">
                     <f:render section="headline" arguments="{_all}" />
                     <div class="row">
+                        <div class="news-detail-image--left">
+                            <f:render partial="Detail/MediaContainer" arguments="{media: newsItem.mediaNonPreviews, settings:settings}" />
+                        </div>
+                        <div class="news-detail-article--right">
+                            <f:render section="inner-content" arguments="{_all}" />
+                        </div>
+                    </div>
+                </f:if>
+                <f:if condition="{settings.templateLayout} == 21">
+                    <f:render section="headline" arguments="{_all}" />
+                    <div class="row">
                         <div class="news-detail-article--left">
                             <f:render section="inner-content" arguments="{_all}" />
                         </div>
@@ -54,23 +65,16 @@
                         </div>
                     </div>
                 </f:if>
-                <f:if condition="{settings.templateLayout} == 21">
+                <f:if condition="{settings.templateLayout} == 22">
                     <f:render section="headline" arguments="{_all}" />
                     <div class="row">
-                        <div class="news-detail-image--left">
-                            <f:for each="{newsItem.mediaNonPreviews}" as="mediaElement">
-                                <div class="thumbnail">
-                                    <f:media file="{mediaElement}" class="img-fluid" />
-                                    <f:if condition="{mediaElement.description}">
-                                        <div class="caption">
-                                            {mediaElement.description}
-                                        </div>
-                                    </f:if>
-                                </div>
-                            </f:for>
-                        </div>
-                        <div class="news-detail-article--right">
+                        <div class="news-detail-article--top">
                             <f:render section="inner-content" arguments="{_all}" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="news-detail-image--bottom">
+                            <f:render partial="Detail/MediaContainer" arguments="{media: newsItem.mediaNonPreviews, settings:settings}" />
                         </div>
                     </div>
                 </f:if>

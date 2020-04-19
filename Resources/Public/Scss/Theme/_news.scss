@@ -72,7 +72,7 @@
 }
 .news-single {
     .news-detail-image {
-        .thumbnail {
+        .outer {
             margin-bottom: 1.5rem;
             .caption {
                 @extend .small;
@@ -81,10 +81,16 @@
             }
         }
         &--right {
+            @extend .news-detail-image;
             @extend .col-md-4;
         }
         &--left {
+            @extend .news-detail-image;
             @extend .col-md-4;
+        }
+        &--bottom {
+            @extend .news-detail-image;
+            @extend .col-md-12;
         }
     }
     .news-detail-article {
@@ -93,6 +99,9 @@
         }
         &--right {
             @extend .col-md-8;
+        }
+        &--top {
+            @extend .col-md-12;
         }
     }
     .news-backlink {
