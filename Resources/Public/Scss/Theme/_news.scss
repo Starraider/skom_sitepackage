@@ -92,6 +92,22 @@
             @extend .news-detail-image;
             @extend .col-md-12;
         }
+        &--float-left {
+            @extend .news-detail-image;
+            @extend .float-md-left;
+            .outer {
+                margin-bottom: 1rem;
+            }
+            margin-right: 1rem;
+        }
+        &--float-right {
+            @extend .news-detail-image;
+            @extend .float-md-right;
+            .outer {
+                margin-bottom: 1rem;
+            }
+            margin-left: 1rem;
+        }
     }
     .news-detail-article {
         &--left {
@@ -102,6 +118,11 @@
         }
         &--top {
             @extend .col-md-12;
+        }
+        &--float {
+            .lead {
+                display: table;
+            }
         }
     }
     .news-backlink {

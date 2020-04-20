@@ -43,7 +43,9 @@
                                 </f:then>
 								<f:else>
                                     <f:for each="{paginatedNews}" as="newsItem" iteration="iterator">
-                                        <f:render partial="List/Item" arguments="{newsItem: newsItem,settings:settings,iterator:iterator}" />
+                                        <div class="row news-list-item">
+                                            <f:render partial="List/Item" arguments="{newsItem: newsItem,settings:settings,iterator:iterator}" />
+                                        </div>
                                     </f:for>
                                 </f:else>
 							</f:if>

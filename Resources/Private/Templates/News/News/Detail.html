@@ -78,6 +78,24 @@
                         </div>
                     </div>
                 </f:if>
+                <f:if condition="{settings.templateLayout} == 30">
+                    <f:render section="headline" arguments="{_all}" />
+                    <div class="news-detail-article--float">
+                        <div class="news-detail-image--float-left">
+                            <f:render partial="Detail/MediaContainer" arguments="{media: newsItem.mediaNonPreviews, settings:settings}" />
+                        </div>
+                        <f:render section="inner-content" arguments="{_all}" />
+                    </div>
+                </f:if>
+                <f:if condition="{settings.templateLayout} == 31">
+                    <f:render section="headline" arguments="{_all}" />
+                    <div class="news-detail-article--float">
+                        <div class="news-detail-image--float-right">
+                            <f:render partial="Detail/MediaContainer" arguments="{media: newsItem.mediaNonPreviews, settings:settings}" />
+                        </div>
+                        <f:render section="inner-content" arguments="{_all}" />
+                    </div>
+                </f:if>
 			</f:then>
 			<f:else>
 				<f:render section="headline" arguments="{_all}" />
