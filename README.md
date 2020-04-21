@@ -1,10 +1,30 @@
 # skom_sitepackage
 Basic TYPO3 sitepackage based on bootstrap_package
 
-Developed 2020 by Sven Kalbhenn
+[![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](PayPal.me/SvenKalbhenn)
+[![License](https://poser.pugx.org/georgringer/news/license)](https://packagist.org/packages/skom/skom-sitepackage)
 
-If you have any questions about this project or just want to talk:
-Send me a message sven@skom.de
+## 1. Features
+- Some additional configuration for bootstrap_package
+- Language menu in the navbar
+- Adds Klaro cookie banner
+- A lot of templates and configuration for tx_news:
+  - List-View:
+    - Image left
+    - Image right
+    - Image top
+    - No Image
+    - Card left
+    - Card right
+  - Detail-View:
+    - Configuration for Lightbox Images
+    - Galery left
+    - Galery right
+    - Galery bottom
+    - Floating Galery left
+    - Floating Galery right
+
+
 
 ## Dependency:
 - typo3: ^9.5
@@ -28,3 +48,8 @@ Send me a message sven@skom.de
 - slug_autoupdate (for TYPO3 < 10)
 - sourceopt ??
 - schema
+
+Developed 2020 by Sven Kalbhenn
+
+If you have any questions about this project or just want to talk:
+Send me a message sven@skom.de
