@@ -1,8 +1,8 @@
-# skom_sitepackage
-Basic TYPO3 sitepackage based on bootstrap_package
-
 [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://PayPal.me/SvenKalbhenn)
 [![License](https://poser.pugx.org/georgringer/news/license)](https://packagist.org/packages/skom/skom-sitepackage)
+
+# skom_sitepackage
+Basic TYPO3 sitepackage based on bootstrap_package
 
 ## 1. Features
 - Some additional configuration for bootstrap_package
