@@ -1,11 +1,34 @@
 #
 # TCEFORM
 #
+# TCEFORM.tt_content.layout.types
 TCEFORM {
     pages {
 
     }
     tt_content {
+        layout {
+            removeItems = 1,2,3
+            disableNoMatchingValueElement = 1
+            types {
+                uploads {
+                    removeItems = 3
+                    altLabels {
+                        0 = LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:uploadslayout.default
+                        1 = LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:uploadslayout.icons
+                        2 = LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:uploadslayout.iconsandpreview
+                    }
+                }
+                textpic {
+                    removeItems = 3
+                    altLabels {
+                        0 = Standard
+                        1 = 2/3 Text
+                        2 = 1/3 Text
+                    }
+                }
+            }
+        }
         background_color_class {
             addItems.red = red
             addItems.yellow = yellow
