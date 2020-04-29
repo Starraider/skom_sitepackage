@@ -5,10 +5,10 @@
     "homepage": "https://www.skom.de",
     "license": ["GPL-2.0-or-later"],
     "keywords": ["TYPO3 CMS"],
-    "version": "9.0.2",
+    "version": "9.0.3",
     "require": {
-        "typo3/cms-core": "^9.5 || ^10.3",
-        "typo3/cms-rte-ckeditor": "^8.7 || ^9.5 || ^10.3",
+        "typo3/cms-core": "^9.5 || ^10.4",
+        "typo3/cms-rte-ckeditor": "^8.7 || ^9.5 || ^10.4",
         "bk2k/bootstrap-package": "^10.0 || ^11.0"
     },
     "autoload": {
