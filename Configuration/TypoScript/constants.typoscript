@@ -75,11 +75,6 @@ page {
         backgroundColor = #eeeeee
     }
     fluidtemplate {
-        layoutRootPath = EXT:skom_sitepackage/Resources/Private/Layouts/Page/
-        partialRootPath = EXT:skom_sitepackage/Resources/Private/Partials/Page/
-        templateRootPath = EXT:skom_sitepackage/Resources/Private/Templates/Page/
-    }
-    fluidtemplate {
         layoutRootPath >
         layoutRootPath {
             0 = EXT:bootstrap_package/Resources/Private/Layouts/Page/
