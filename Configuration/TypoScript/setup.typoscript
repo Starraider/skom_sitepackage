@@ -7,13 +7,14 @@
 #### EXTENSIONS                                          ####
 #### Manual inclusion to keep control over loading order ####
 #############################################################
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:skom_sitepackage/Configuration/TypoScript/Extension/WaconCookieManagement/setup.typoscript"  condition="extension.isLoaded('wacon_cookie_management')">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:skom_sitepackage/Configuration/TypoScript/Extension/WaconCookieManagement/setup.typoscript"  condition="extension.isLoaded('wacon_cookie_management') == 1">
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:skom_sitepackage/Configuration/TypoScript/Extension/News/setup.typoscript" condition="extension.isLoaded('news') == 1">
 
 #############
 ### Debug ###
 #############
 #plugin.tx_min.tinysource.enable = 1
+[applicationContext = Production*]
 config {
     debug = 0
     no_cache = 0
@@ -26,6 +27,7 @@ config {
     sendCacheHeaders = 1
     cache_period = 7776000
 }
+[end]
 [applicationContext = Development]
     #plugin.tx_min.tinysource.enable = 0
     config {
@@ -40,19 +42,15 @@ config {
         sendCacheHeaders = 0
         cache_period = 0
     }
-[global]
+[end]
 
 ############################
 #### Google Tag Manager ####
 ############################
 # page.headerData.23 = TEXT
 # page.headerData.23.value(
-# <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-# new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-# j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-# 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-# })(window,document,'script','dataLayer','GTM-NZK68Q5');</script>
 # )
+
 ##############
 #### PAGE ####
 ##############
@@ -86,6 +84,13 @@ page {
         modernizr.defer = 1
         jquery = EXT:bootstrap_package/Resources/Public/Contrib/jquery/jquery.min.js
         jquery.defer = 1
+        modernizr.async = 1
+        jquery = EXT:bootstrap_package/Resources/Public/Contrib/jquery/jquery.min.js
+        jquery.defer = 1
+        klaro_config = EXT:skom_sitepackage/Resources/Public/JavaScript/Dist/config.js
+        klaro_config.defer = 1
+        klaro = EXT:skom_sitepackage/Resources/Public/JavaScript/Dist/klaro.js
+        klaro.defer = 1
         popper = EXT:bootstrap_package/Resources/Public/Contrib/popper/popper.min.js
         popper.defer = 1
         bootstrap = EXT:bootstrap_package/Resources/Public/Contrib/bootstrap4/js/bootstrap.min.js
@@ -96,10 +101,6 @@ page {
         photoswipe_core.defer = 1
         photoswipe_ui = EXT:bootstrap_package/Resources/Public/Contrib/photoswipe/photoswipe-ui-default.min.js
         photoswipe_ui.defer = 1
-        klaro_config = EXT:skom_sitepackage/Resources/Public/JavaScript/Dist/config.js
-        klaro_config.defer = 1
-        klaro = EXT:skom_sitepackage/Resources/Public/JavaScript/Dist/klaro.js
-        klaro.defer = 1
         #### Custom Modules
         bootstrap_accordion = EXT:bootstrap_package/Resources/Public/JavaScript/Dist/bootstrap.accordion.min.js
         bootstrap_accordion.defer = 1
