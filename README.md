@@ -1,5 +1,6 @@
 [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://PayPal.me/SvenKalbhenn)
 [![License](https://poser.pugx.org/georgringer/news/license)](https://packagist.org/packages/skom/skom-sitepackage)
+![Check Commit](https://github.com/Starraider/skom_sitepackage/workflows/Check%20Commit/badge.svg)
 
 # skom_sitepackage
 Basic TYPO3 sitepackage based on bootstrap_package
