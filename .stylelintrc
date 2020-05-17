@@ -1,6 +1,13 @@
 {
+  "extends": "stylelint-prettier/recommended",
   "rules": {
-    "at-rule-empty-line-before": "never",
+    "at-rule-empty-line-before": [ "always", {
+      "except": [
+        "blockless-after-same-name-blockless",
+        "first-nested"
+      ],
+      "ignore": ["after-comment"]
+    } ],
     "at-rule-name-case": "lower",
     "at-rule-name-space-after": "always-single-line",
     "at-rule-semicolon-newline-after": "always",
@@ -63,7 +70,7 @@
     "no-extra-semicolons": true,
     "no-invalid-double-slash-comments": true,
     "no-missing-end-of-source-newline": true,
-    "number-leading-zero": "never",
+    "number-leading-zero": "always",
     "number-no-trailing-zeros": true,
     "property-case": "lower",
     "property-no-unknown": true,
