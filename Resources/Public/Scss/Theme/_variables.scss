@@ -5,26 +5,29 @@
 //
 // Colors
 //
-$color-facebook:    #3b5999;
-$color-twitter:     #55acee;
-$color-instagram:   #e4405f;
-$color-youtube:     #cd201f;
-$color-xing:        #026466;
-$color-kununu:      #000000;
+$color-facebook: #3b5999;
+$color-twitter: #55acee;
+$color-instagram: #e4405f;
+$color-youtube: #cd201f;
+$color-xing: #026466;
+$color-kununu: #000000;
 
 $headline-scaling: ();
-$headline-scaling: map-merge((
+$headline-scaling: map-merge(
+    (
         xs: 0.8,
         sm: 0.8,
         md: 0.9,
         lg: 1,
-        xl: 1
-), $headline-scaling);
+        xl: 1,
+    ),
+    $headline-scaling
+);
 
 //
 // Frame Inner Spacing
 //
-$frame-inner-spacing:         2rem !default;
+$frame-inner-spacing: 2rem !default;
 $frame-inner-spacing-scaling: () !default;
 $frame-inner-spacing-scaling: map-merge(
     (
@@ -32,7 +35,7 @@ $frame-inner-spacing-scaling: map-merge(
         sm: 1.25,
         md: 1.5,
         lg: 1.75,
-        xl: 1.75
+        xl: 1.75,
     ),
     $frame-inner-spacing-scaling
 );
