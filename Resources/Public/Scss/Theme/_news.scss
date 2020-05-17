@@ -1,3 +1,4 @@
+// @import "../../../../../bootstrap_package/Resources/Public/Scss/Theme/theme";
 .news-list-item {
     margin-bottom: 2rem;
     .news-list-image {
@@ -77,7 +78,7 @@
             .caption {
                 @extend .small;
                 background-color: $gray-200;
-                padding: .3rem;
+                padding: 0.3rem;
             }
         }
         &--right {
@@ -143,5 +144,5 @@
 }
 .news-information {
     @extend .small;
-    margin-bottom: .5rem;
+    margin-bottom: 0.5rem;
 }

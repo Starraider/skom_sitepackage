@@ -1,12 +1,12 @@
 //
-// Variables
-//
-@import "variables";
-
-//
 // Import needed Bootstrap Package Files
 //
 @import "../../../../../bootstrap_package/Resources/Public/Scss/Theme/theme";
+
+//
+// Variables
+//
+@import "variables";
 
 //
 // Extensions
@@ -39,6 +39,7 @@
     padding-top: 2.5rem;
     padding-bottom: 2.5rem;
 }
+
 //
 // Main Navigation
 //
@@ -63,6 +64,7 @@
         }
     }
 }
+
 // #mainnavigation > ul:nth-child(2) > li.nav-item.language-menu-item > a > img
 //
 // Carousel
@@ -73,6 +75,7 @@
         color: $primary;
     }
 }
+
 //
 // Footer
 //
