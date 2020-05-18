@@ -55,6 +55,10 @@ Basic TYPO3 sitepackage based on bootstrap_package
 -   sourceopt ??
 -   schema
 
+## Code quality
+- Commit syntax is checked
+-
+
 Developed 2020 by Sven Kalbhenn
 
 If you have any questions about this project or just want to talk:
