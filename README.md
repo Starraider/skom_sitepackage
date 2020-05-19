@@ -1,7 +1,7 @@
 [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://PayPal.me/SvenKalbhenn)
 [![License](https://poser.pugx.org/georgringer/news/license)](https://packagist.org/packages/skom/skom-sitepackage)
 ![Check Commit](https://github.com/Starraider/skom_sitepackage/workflows/Check%20Commit/badge.svg)
-![Create Release](https://github.com/Starraider/skom_sitepackage/workflows/Create%20Release/badge.svg?event=release)
+![Create Release](https://github.com/Starraider/skom_sitepackage/workflows/Create%20Release/badge.svg?branch=master&event=push)
 
 # skom_sitepackage
 
