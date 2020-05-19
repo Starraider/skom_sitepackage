@@ -7,7 +7,7 @@ on:
         # Sequence of patterns matched against refs/tags
         # Push events to matching v*, i.e. v1.0, v20.15.10
         tags:
-            - v*
+            - v*.*.*
 
 jobs:
     build:
@@ -18,22 +18,22 @@ jobs:
               uses: actions/checkout@v2
               with:
                   fetch-depth: 0
+            - name: Set output
+              id: vars
+              run: echo ::set-output name=tag::${GITHUB_REF:10}
             - name: changelog
               uses: scottbrenner/generate-changelog-action@master
               id: Changelog
               env:
                   REPO: ${{ github.repository }}
-            - name: Get the tag
-              uses: olegtarasov/get-tag@v2
-              id: tagName
             - name: Create Release
               id: create_release
               uses: actions/create-release@latest
               env:
                   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This token is provided by Actions, you do not need to create your own token
               with:
-                  tag_name: ${{ steps.tagName.outputs.tag }}
-                  release_name: Release ${{ steps.tagName.outputs.tag }}
+                  tag_name: ${{ steps.vars.outputs.tag }}
+                  release_name: Release ${{ steps.vars.outputs.tag }}
                   body: |
                       ${{ steps.Changelog.outputs.changelog }}
                   draft: false
