@@ -23,17 +23,17 @@ jobs:
               id: Changelog
               env:
                   REPO: ${{ github.repository }}
-            - name: Get the version
-              id: vars
-              run: echo ::set-output name=tag::${GITHUB_REF:10}
+            - name: Get the tag
+              uses: olegtarasov/get-tag@v2
+              id: tagName
             - name: Create Release
               id: create_release
               uses: actions/create-release@latest
               env:
                   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This token is provided by Actions, you do not need to create your own token
               with:
-                  tag_name: ${{ steps.vars.outputs.tag }}
-                  release_name: Release ${{ steps.vars.outputs.tag }}
+                  tag_name: ${{ steps.tagName.outputs.tag }}
+                  release_name: Release ${{ steps.tagName.outputs.tag }}
                   body: |
                       ${{ steps.Changelog.outputs.changelog }}
                   draft: false
