@@ -24,16 +24,16 @@ jobs:
               env:
                   REPO: ${{ github.repository }}
             - name: Get the version
-              id: get_version
-              run: echo ::set-output name=VERSION::${GITHUB_REF/refs\/tags\//}
+              id: vars
+              run: echo ::set-output name=tag::${GITHUB_REF:10}
             - name: Create Release
               id: create_release
               uses: actions/create-release@latest
               env:
                   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This token is provided by Actions, you do not need to create your own token
               with:
-                  tag_name: ${{ steps.get_version.outputs.VERSION }}
-                  release_name: Release ${{ steps.get_version.outputs.VERSION }}
+                  tag_name: ${{ steps.vars.outputs.tag }}
+                  release_name: Release ${{ steps.vars.outputs.tag }}
                   body: |
                       ${{ steps.Changelog.outputs.changelog }}
                   draft: false
