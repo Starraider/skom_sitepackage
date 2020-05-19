@@ -7,7 +7,7 @@
   },
   "homepage": "https://www.skom.de",
   "author": "Sven Kalbhenn",
-  "version": "9.2.7",
+  "version": "9.2.8",
   "license": "GPL-2.0-or-later",
   "devDependencies": {
     "grunt": "^1.0.3",
