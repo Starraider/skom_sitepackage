@@ -57,7 +57,7 @@ Basic TYPO3 sitepackage based on bootstrap_package
 -   schema
 
 ## Code quality
-- Commit syntax is checked
+- Commit syntax is checked on each commit
 -
 
 Developed 2020 by Sven Kalbhenn
