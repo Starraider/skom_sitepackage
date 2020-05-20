@@ -1,8 +1,10 @@
-[![CodeFactor](https://www.codefactor.io/repository/github/starraider/skom_sitepackage/badge/master)](https://www.codefactor.io/repository/github/starraider/skom_sitepackage/overview/master)
+
 [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://PayPal.me/SvenKalbhenn)
-[![License](https://poser.pugx.org/georgringer/news/license)](https://packagist.org/packages/skom/skom-sitepackage)
+![GitHub](https://img.shields.io/github/license/Starraider/skom_sitepackage)
+[![CodeFactor](https://www.codefactor.io/repository/github/starraider/skom_sitepackage/badge/master)](https://www.codefactor.io/repository/github/starraider/skom_sitepackage/overview/master)
+![GitHub issues](https://img.shields.io/github/issues/Starraider/skom_sitepackage)
 ![Check Commit](https://github.com/Starraider/skom_sitepackage/workflows/Check%20Commit/badge.svg)
-![Create Release](https://github.com/Starraider/skom_sitepackage/workflows/Create%20Release/badge.svg?branch=master&event=push)
+
 
 # skom_sitepackage
 
