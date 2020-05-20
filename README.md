@@ -1,3 +1,4 @@
+[![CodeFactor](https://www.codefactor.io/repository/github/starraider/skom_sitepackage/badge/master)](https://www.codefactor.io/repository/github/starraider/skom_sitepackage/overview/master)
 [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://PayPal.me/SvenKalbhenn)
 [![License](https://poser.pugx.org/georgringer/news/license)](https://packagist.org/packages/skom/skom-sitepackage)
 ![Check Commit](https://github.com/Starraider/skom_sitepackage/workflows/Check%20Commit/badge.svg)
