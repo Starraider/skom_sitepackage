@@ -1,0 +1,12 @@
+sniffs:
+  - class: RepeatingRValue
+    disabled: true
+  - class: Indentation
+    parameters:
+      useSpaces: true
+      indentPerLevel: 4
+      indentConditions: true
+paths:
+  - Configuration/TypoScript
+filePatterns:
+  - "*.typoscript"
