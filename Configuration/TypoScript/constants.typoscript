@@ -14,43 +14,60 @@
 #### DEVELOPMENT SETTINGS ####
 ##############################
 [applicationContext = Development*]
-    config.no_cache = 1
-    config.sendCacheHeaders = 0
-    config.compressJs = 0
-    config.concatenateCss = 0
-    config.concatenateJs = 0
-    config.compressCss = 0
-    config.admPanel = 1
-    sourceopt.formatHtml = 4
-    sourceopt.removeComments = 0
-    plugin.tx_min.tinysource.enable = 0
-    plugin.bootstrap_package.settings.cssSourceMapping = 1
+    config {
+        no_cache = 1
+        sendCacheHeaders = 0
+        compressJs = 0
+        concatenateCss = 0
+        concatenateJs = 0
+        compressCss = 0
+        admPanel = 1
+    }
+    sourceopt {
+        formatHtml = 4
+        removeComments = 0
+    }
+    plugin {
+        tx_min.tinysource.enable = 0
+        bootstrap_package.settings.cssSourceMapping = 1
+    }
 [end]
 [applicationContext = Production*]
-    config.no_cache = 0
-    config.sendCacheHeaders = 1
-    config.compressJs = 1
-    config.concatenateCss = 1
-    config.concatenateJs = 1
-    config.compressCss = 1
-    config.admPanel = 0
-    sourceopt.formatHtml = 1
-    sourceopt.removeComments = 1
-    plugin.tx_min.tinysource.enable = 1
-    plugin.bootstrap_package.settings.cssSourceMapping = 0
+    config {
+        no_cache = 0
+        sendCacheHeaders = 1
+        compressJs = 1
+        concatenateCss = 1
+        concatenateJs = 1
+        compressCss = 1
+        admPanel = 0
+    }
+    sourceopt {
+        formatHtml = 1
+        removeComments = 1
+    }
+    plugin {
+        tx_min.tinysource.enable = 1
+        bootstrap_package.settings.cssSourceMapping = 0
+    }
 [end]
+
+
 
 ############
 ### PAGE ###
 ############
 page {
     theme {
-        navigation.style = default
+        navigation {
+            type = top
+            style = default
+        }
         meta.navigationValue = 4,5
         copyright.text = &copy; 2020 Sven Kalbhenn
         language.enable = 1
         # TODO: Was ist das?
-        #meta.enable = 0
+        # meta.enable
         # TODO: In cookiebanner config auslagern
         cookieconsent.enable = 0
         googleFont {
@@ -92,49 +109,56 @@ page {
         }
     }
 }
-
+[treeLevel = 0]
+    page.theme.navigation.style = default-transition
+[end]
 ##################
 ### EXTENSIONS ###
 ##################
-plugin.bootstrap_package {
-    view {
-        layoutRootPath >
-        layoutRootPath {
-            0 = EXT:bootstrap_package/Resources/Private/Layouts/
-            1 = EXT:skom_sitepackage/Resources/Private/Layouts/
-        }
-        partialRootPath >
-        partialRootPath {
-            0 = EXT:bootstrap_package/Resources/Private/Partials/
-            1 = EXT:skom_sitepackage/Resources/Private/Partials/
-        }
-        templateRootPath >
-        templateRootPath {
-            0 = EXT:bootstrap_package/Resources/Private/Templates/
-            1 = EXT:skom_sitepackage/Resources/Private/Templates/
+plugin {
+    bootstrap_package {
+        view {
+            layoutRootPath >
+            layoutRootPath {
+                0 = EXT:bootstrap_package/Resources/Private/Layouts/
+                1 = EXT:skom_sitepackage/Resources/Private/Layouts/
+            }
+            partialRootPath >
+            partialRootPath {
+                0 = EXT:bootstrap_package/Resources/Private/Partials/
+                1 = EXT:skom_sitepackage/Resources/Private/Partials/
+            }
+            templateRootPath >
+            templateRootPath {
+                0 = EXT:bootstrap_package/Resources/Private/Templates/
+                1 = EXT:skom_sitepackage/Resources/Private/Templates/
+            }
         }
     }
 }
 
+
 ########################
 ### CONTENT ELEMENTS ###
 ########################
-plugin.bootstrap_package_contentelements {
-    view {
-        layoutRootPath >
-        layoutRootPath {
-            0 = EXT:bootstrap_package/Resources/Private/Layouts/ContentElements/
-            1 = EXT:skom_sitepackage/Resources/Private/Layouts/ContentElements/
-        }
-        partialRootPath >
-        partialRootPath {
-            0 = EXT:bootstrap_package/Resources/Private/Partials/ContentElements/
-            1 = EXT:skom_sitepackage/Resources/Private/Partials/ContentElements/
-        }
-        templateRootPath >
-        templateRootPath {
-            0 = EXT:bootstrap_package/Resources/Private/Templates/ContentElements/
-            1 = EXT:skom_sitepackage/Resources/Private/Templates/ContentElements/
+plugin {
+    bootstrap_package_contentelements {
+        view {
+            layoutRootPath >
+            layoutRootPath {
+                0 = EXT:bootstrap_package/Resources/Private/Layouts/ContentElements/
+                1 = EXT:skom_sitepackage/Resources/Private/Layouts/ContentElements/
+            }
+            partialRootPath >
+            partialRootPath {
+                0 = EXT:bootstrap_package/Resources/Private/Partials/ContentElements/
+                1 = EXT:skom_sitepackage/Resources/Private/Partials/ContentElements/
+            }
+            templateRootPath >
+            templateRootPath {
+                0 = EXT:bootstrap_package/Resources/Private/Templates/ContentElements/
+                1 = EXT:skom_sitepackage/Resources/Private/Templates/ContentElements/
+            }
         }
     }
 }
@@ -145,100 +169,94 @@ plugin.bootstrap_package_contentelements {
 config.headerComment = Based on skom_sitepackage by Sven Kalbhenn - https://www.skom.de/
 sourceopt.headerComment = Based on skom_sitepackage by Sven Kalbhenn - https://www.skom.de/
 
-#############
-### Theme ###
-#############
-[treeLevel = 0]
-page.theme.navigation.style = default-transition
-[end]
-page.theme.navigation.type = top
+
 
 ################################
 ### BOOTSTRAP SCSS CONSTANTS ###
 ################################
-plugin.bootstrap_package.settings.scss {
-    ### colors ###
-    white = #fff
-    gray-100 = #f8f9fa
-    gray-200 = #e9ecef
-    gray-300 = #dee2e6
-    gray-400 = #ced4da
-    gray-500 = #adb5bd
-    gray-600 = #6c757d
-    gray-700 = #555555
-    gray-800 = #3b3b3b
-    gray-900 = #2b2b2b
-    black = #000
-    blue = #61B2D4
-    red = #d4003c
-    orange = #ee9200
-    green = #9CB502
-    yellow = #F4D733
-    black = #222222
-    white = #ffffff
+plugin {
+    bootstrap_package {
+        settings {
+            scss {
+                ### colors ###
+                white = #ffffff
+                gray-100 = #f8f9fa
+                gray-200 = #e9ecef
+                gray-300 = #dee2e6
+                gray-400 = #ced4da
+                gray-500 = #adb5bd
+                gray-600 = #6c757d
+                gray-700 = #555555
+                gray-800 = #3b3b3b
+                gray-900 = #2b2b2b
+                black = #222222
+                blue = #61B2D4
+                red = #d4003c
+                orange = #ee9200
+                green = #9CB502
+                yellow = #F4D733
 
-    primary = #a60606
-    secondary = #701B11
+                primary = #a60606
+                secondary = #701B11
 
-    body-bg = $white
-    body-color = #58585a
+                body-bg = $white
+                body-color = #58585a
 
-    link-color = $secondary
-    link-decoration = none
-    link-hover-color = darken($secondary, 5%)
-    link-hover-decoration = underline
+                link-color = $secondary
+                link-decoration = none
+                link-hover-color = darken($secondary, 5%)
+                link-hover-decoration = underline
 
-    #link-alternate-color = darken($secondary, 20%)
+                footer-sections = (content:(background: $gray-200, color: $body-color, link-color: $link-color), meta:(background: $body-bg, color: $body-color, link-color: $link-color))
 
-    footer-sections = (content:(background: $gray-200, color: $body-color, link-color: $link-color), meta:(background: $body-bg, color: $body-color, link-color: $link-color))
+                ### Fonts ###
+                font-family-sans-serif = -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"
+                font-family-base = $font-family-sans-serif
+                font-size-base = 1rem
 
-    ### Fonts ###
-    font-family-sans-serif = -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"
-    font-family-base = $font-family-sans-serif
-    font-size-base = 1rem
+                ### Headings ###
+                headings-font-family = "#{$google-webfont}", sans-serif
+                headings-color = $secondary
+                headings-font-weight = 400
+                headings-margin-bottom = $spacer / 2
+                h1-font-size = $font-size-base * 1.5
+                h2-font-size = $font-size-base * 1.8
+                h3-font-size = $font-size-base * 1.5
+                h4-font-size = $font-size-base * 1.2
+                h5-font-size = $font-size-base * 1
 
-    ### Headings ###
-    headings-font-family = "#{$google-webfont}", sans-serif
-    headings-color = $secondary
-    headings-font-weight = 400
-    headings-margin-bottom = $spacer / 2
-    h1-font-size = $font-size-base * 1.5
-    h2-font-size = $font-size-base * 1.8
-    h3-font-size = $font-size-base * 1.5
-    h4-font-size = $font-size-base * 1.2
-    h5-font-size = $font-size-base * 1
+                ### Navbar ###
+                # Background Color is set via the theme.scss
+                navbar-brand-padding-y = 0.5rem
+                navbar-nav-link-padding-x = 1rem
+                navbar-padding-x = $spacer
+                navbar-padding-y = $spacer /2
 
-    ### Navbar ###
-    # Background Color is set via the theme.scss
-    #navbar-heights = (lg: 200px, xl: 125px)
-    navbar-brand-padding-y = 0.5rem
-    navbar-nav-link-padding-x = 1rem
-    navbar-padding-x = $spacer
-    navbar-padding-y = $spacer /2
+                navbar-light-color = $secondary
+                navbar-light-active-color = $secondary
+                navbar-light-hover-color = $secondary
+                navbar-dark-color = $gray-700
+                navbar-dark-active-color = $gray-700
+                navbar-dark-hover-color = $gray-700
+                ### Dropdown ###
+                dropdown-bg = $primary
+                dropdown-link-hover-bg = darken($primary, 5%)
+                dropdown-link-active-bg = darken($primary, 5%)
 
-    navbar-light-color = $secondary
-    navbar-light-active-color = $secondary
-    navbar-light-hover-color = $secondary
-    navbar-dark-color = $gray-700
-    navbar-dark-active-color = $gray-700
-    navbar-dark-hover-color = $gray-700
-    ### Dropdown ###
-    dropdown-bg = $primary
-    dropdown-link-hover-bg = darken($primary, 5%)
-    dropdown-link-active-bg = darken($primary, 5%)
+                dropdown-color = $link-color
+                dropdown-link-color = $link-color
+                dropdown-link-hover-color = darken($link-color, 10%)
+                dropdown-link-active-color = darken($link-color, 10%)
 
-    dropdown-color = $link-color
-    dropdown-link-color = $link-color
-    dropdown-link-hover-color = darken($link-color, 10%)
-    dropdown-link-active-color = darken($link-color, 10%)
+                dropdown-border-color = darken($primary, 10%)
+                dropdown-font-size = $font-size-base*0.9
 
-    dropdown-border-color = darken($primary, 10%)
-    dropdown-font-size = $font-size-base*0.9
+                dropdown-item-padding-x = 1.6rem
+                dropdown-item-padding-y = .3rem
+                dropdown-padding-y = .6rem
 
-    dropdown-item-padding-x = 1.6rem
-    dropdown-item-padding-y = .3rem
-    dropdown-padding-y = .6rem
-
-
-    print-page-size = a4
+                print-page-size = a4
+            }
+        }
+    }
 }
