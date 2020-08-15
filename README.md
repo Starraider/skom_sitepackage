@@ -3,6 +3,8 @@
 ![GitHub](https://img.shields.io/github/license/Starraider/skom_sitepackage)
 [![CodeFactor](https://www.codefactor.io/repository/github/starraider/skom_sitepackage/badge/master)](https://www.codefactor.io/repository/github/starraider/skom_sitepackage/overview/master)
 ![GitHub issues](https://img.shields.io/github/issues/Starraider/skom_sitepackage)
+![Lint Code Base](https://github.com/Starraider/skom_sitepackage/workflows/Lint%20Code%20Base/badge.svg)
+![CodeQL](https://github.com/Starraider/skom_sitepackage/workflows/CodeQL/badge.svg)
 ![Check Commit](https://github.com/Starraider/skom_sitepackage/workflows/Check%20Commit/badge.svg)
 
 
@@ -33,7 +35,7 @@ Basic TYPO3 sitepackage based on bootstrap_package
 
 ## Dependency:
 
--   typo3: ^9.5.17 or ^10.4.2
+-   typo3: ^9.5.20 or ^10.4.6
 -   [bk2k/bootstrap-package](https://extensions.typo3.org/extension/bootstrap_package): ^11
 
 ## Supported extensions
@@ -61,6 +63,7 @@ Basic TYPO3 sitepackage based on bootstrap_package
 
 ## Code quality
 - Commit syntax is checked on each commit
+- Super Linter is executed on each commit
 
 Developed 2020 by Sven Kalbhenn
 
