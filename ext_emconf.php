@@ -3,6 +3,7 @@
 /**
  * Extension Manager/Repository config file for ext "skom_sitepackage".
  */
+
 $EM_CONF[$_EXTKEY] = [
     'title' => 'SKom Sitepackage',
     'description' => 'Basic Sitepackage by SKom',
