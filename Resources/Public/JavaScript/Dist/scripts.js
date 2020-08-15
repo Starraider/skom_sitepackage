@@ -3,4 +3,4 @@
  * Copyright 2017-2019 Sven Kalbhenn
  * Licensed under the GPL-2.0-or-later license
  */
-console.log("skom_sitepackage loaded");
+console.log('skom_sitepackage loaded');

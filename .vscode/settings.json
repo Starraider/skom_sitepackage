@@ -1,3 +1,5 @@
 {
-    "restructuredtext.confPath": ""
+    "conventionalCommits.scopes": [
+        "security"
+    ]
 }
