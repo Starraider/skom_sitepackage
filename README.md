@@ -35,7 +35,7 @@ Basic TYPO3 sitepackage based on bootstrap_package
 
 ## Dependency:
 
--   typo3: ^9.5.20 or ^10.4.6
+-   typo3: ^9.5.25 or ^10.4.14
 -   [bk2k/bootstrap-package](https://extensions.typo3.org/extension/bootstrap_package): ^11
 
 ## Supported extensions
