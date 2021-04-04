@@ -13,23 +13,21 @@
 #############
 ### Debug ###
 #############
-#plugin.tx_min.tinysource.enable = 1
 [applicationContext = Production*]
-config {
-    debug = 0
-    no_cache = 0
-    admPanel = 0
-    contentObjectExceptionHandler = 1
-    compressCss = 1
-    concatenateCss = 1
-    compressJs = 1
-    concatenateJs = 1
-    sendCacheHeaders = 1
-    cache_period = 7776000
-}
+    config {
+        debug = 0
+        no_cache = 0
+        admPanel = 0
+        contentObjectExceptionHandler = 1
+        compressCss = 1
+        concatenateCss = 1
+        compressJs = 1
+        concatenateJs = 1
+        sendCacheHeaders = 1
+        cache_period = 7776000
+    }
 [end]
 [applicationContext = Development]
-    #plugin.tx_min.tinysource.enable = 0
     config {
         debug = 1
         no_cache = 1
@@ -43,13 +41,6 @@ config {
         cache_period = 0
     }
 [end]
-
-############################
-#### Google Tag Manager ####
-############################
-# page.headerData.23 = TEXT
-# page.headerData.23.value(
-# )
 
 ##############
 #### PAGE ####
@@ -76,15 +67,13 @@ page {
     includeCSS {
         theme = EXT:skom_sitepackage/Resources/Public/Scss/Theme/theme.scss
     }
-
     includeJSLibs {
         modernizer >
         modernizr = EXT:bootstrap_package/Resources/Public/Contrib/modernizr/modernizr.min.js
-        modernizr.forceOnTop = 1
-        modernizr.defer = 1
-        jquery = EXT:bootstrap_package/Resources/Public/Contrib/jquery/jquery.min.js
-        jquery.defer = 1
-        modernizr.async = 1
+        modernizr {
+            forceOnTop = 1
+            defer = 1
+        }
         jquery = EXT:bootstrap_package/Resources/Public/Contrib/jquery/jquery.min.js
         jquery.defer = 1
         klaro_config = EXT:skom_sitepackage/Resources/Public/JavaScript/Dist/config.js
@@ -118,16 +107,12 @@ page {
         bootstrap_lightbox.defer = 1
         bootstrap_navbar = EXT:bootstrap_package/Resources/Public/JavaScript/Dist/bootstrap.navbar.min.js
         bootstrap_navbar.defer = 1
-        #waconcookiemanagement = EXT:wacon_cookie_management/Resources/Public/JavaScript/waconcookiemanagement.js
-        #waconcookiemanagement.defer = 1
     }
-
     includeJS {
         ajquery >
         skom_sitepackage_scripts = EXT:skom_sitepackage/Resources/Public/JavaScript/Dist/scripts.js
         skom_sitepackage_scripts.defer = 1
     }
-
     includeJSFooterlibs {
         jquery >
         popper >
@@ -144,13 +129,22 @@ page {
         bootstrap_lightbox >
         bootstrap_navbar >
     }
-
     includeJSFooter {
         skom_sitepackage_scripts >
         waconcookiemanagement >
     }
 }
-
+# Extension JavaScript
+[userFunc = TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('wacon_cookie_management')]
+    page {
+        10 {
+            includeJSLibs {
+                waconcookiemanagement = EXT:wacon_cookie_management/Resources/Public/JavaScript/waconcookiemanagement.js
+                waconcookiemanagement.defer = 1
+            }
+        }
+    }
+[END]
 
 ######################################
 #### Enable High Resolution Images ###
