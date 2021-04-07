@@ -1,3 +1,7 @@
+.DS_Store
+.idea/
+*.ld
+
 ## TYPO3 v6.2
 # Ignore several upload and file directories.
 /fileadmin/user_upload/
