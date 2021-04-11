@@ -5,17 +5,27 @@
 // You can also disable auto-loading of the consent notice by adding
 // data-no-auto-load=true to the script tag.
 var klaroConfig = {
-    // You can customize the ID of the DIV element that Klaro will create
-    // when starting up. If undefined, Klaro will use 'klaro'.
-    elementID: 'klaro',
+    version: 1,
+    elementID: "klaro",
+    styling: {
+        theme: ["light", "top", "wide"],
+    },
+
+    // Setting this to true will keep Klaro from automatically loading itself
+    // when the page is being loaded.
+    noAutoLoad: false,
+
+    htmlTexts: true,
+    embedded: false,
+    groupByPurpose: true,
 
     // How Klaro should store the user's preferences. It can be either 'cookie'
     // (the default) or 'localStorage'.
-    storageMethod: 'cookie',
+    storageMethod: "cookie",
 
     // You can customize the name of the cookie that Klaro uses for storing
     // user consent decisions. If undefined, Klaro will use 'klaro'.
-    cookieName: 'klaro',
+    cookieName: "klaro",
 
     // You can also set a custom expiration time for the Klaro cookie.
     // By default, it will expire after 120 days.
@@ -27,7 +37,7 @@ var klaroConfig = {
     //cookieDomain: '.github.com',
 
     // Put a link to your privacy policy here (relative or absolute).
-    privacyPolicy: '/datenschutzerklaerung',
+    privacyPolicy: "/datenschutzerklaerung",
 
     // Defines the default state for applications (true=enabled by default).
     default: false,
@@ -64,67 +74,65 @@ var klaroConfig = {
         de: {
             consentModal: {
                 description:
-                    'Hier können Sie einsehen und anpassen, welche Information wir über Sie sammeln und welche externe Dienste verwendet werden.',
+                    "Hier können Sie einsehen und anpassen, welche Information wir über Sie sammeln und welche externe Dienste verwendet werden.",
             },
             youtube: {
-                description: 'Eingebettete Videos anzeigen',
+                description: "Eingebettete Videos anzeigen",
             },
             googlemaps: {
-                description: 'Eingebettete Karten anzeigen',
+                description: "Eingebettete Karten anzeigen",
             },
             googleanalytics: {
-                description: 'Sammeln von Besucherstatistiken',
+                description: "Sammeln von Besucherstatistiken",
             },
             adsense: {
-                description: 'Anzeigen von Werbeanzeigen',
+                description: "Anzeigen von Werbeanzeigen",
             },
             language: {
-                description:
-                    'Speichern der Sprache-Einstellungen',
+                description: "Speichern der Sprache-Einstellungen",
             },
             cookieconsent: {
-                description: 'Speichern der Cookie-Einstellungen',
+                description: "Speichern der Cookie-Einstellungen",
             },
             purposes: {
-                content: 'Multimedia Inhalte',
-                analytics: 'Besucher-Statistiken',
-                security: 'Sicherheit',
-                advertising: 'Anzeigen von Werbung',
-                styling: 'Styling',
-                functional: 'Funktional',
+                content: "Multimedia Inhalte",
+                analytics: "Besucher-Statistiken",
+                security: "Sicherheit",
+                advertising: "Anzeigen von Werbung",
+                styling: "Styling",
+                functional: "Funktional",
             },
         },
         en: {
             consentModal: {
                 description:
-                    'Here you can see and customize the information that we collect about you and which external services are used.',
+                    "Here you can see and customize the information that we collect about you and which external services are used.",
             },
             youtube: {
-                description: 'Embedded videos from YouTube',
+                description: "Embedded videos from YouTube",
             },
             googlemaps: {
-                description: 'Embedded maps from Google Maps',
+                description: "Embedded maps from Google Maps",
             },
             googleanalytics: {
-                description: 'Collecting of visitor statistics',
+                description: "Collecting of visitor statistics",
             },
             adsense: {
-                description: 'Displaying of advertisements',
+                description: "Displaying of advertisements",
             },
             language: {
-                description:
-                    'Selected language',
+                description: "Selected language",
             },
             cookieconsent: {
-                description: 'Saves your Cookie-Settings',
+                description: "Saves your Cookie-Settings",
             },
             purposes: {
-                content: 'Multimedia Content',
-                analytics: 'Analytics',
-                security: 'Security',
-                advertising: 'Advertising',
-                styling: 'Styling',
-                functional: 'Functional',
+                content: "Multimedia Content",
+                analytics: "Analytics",
+                security: "Security",
+                advertising: "Advertising",
+                styling: "Styling",
+                functional: "Functional",
             },
         },
     },
@@ -133,22 +141,22 @@ var klaroConfig = {
     // The apps will appear in the modal in the same order as defined here.
     apps: [
         {
-            name: 'youtube',
-            title: 'YouTube Videos',
+            name: "youtube",
+            title: "YouTube Videos",
             default: false,
-            purposes: ['content'],
+            purposes: ["content"],
         },
         {
-            name: 'googlemaps',
-            title: 'Google Maps',
+            name: "googlemaps",
+            title: "Google Maps",
             default: false,
-            purposes: ['content'],
+            purposes: ["content"],
         },
         {
-            name: 'googleanalytics',
+            name: "googleanalytics",
             default: false,
-            title: 'Google Analytics',
-            purposes: ['analytics'],
+            title: "Google Analytics",
+            purposes: ["analytics"],
             cookies: [
                 // you can also explicitly provide a path and a domain for
                 // a given cookie. This is necessary if you have apps that
@@ -156,11 +164,16 @@ var klaroConfig = {
                 // is not the current domain. If you do not set these values
                 // properly, the cookie can't be deleted by Klaro
                 // (there is no way to access the path or domain of a cookie in JS)
-                '_ga', '_gat', '_gid', 'IDE', 'id', 'FLC',
+                "_ga",
+                "_gat",
+                "_gid",
+                "IDE",
+                "id",
+                "FLC",
             ],
-            callback: function(consent, app) {
+            callback: function (consent, app) {
                 console.log(
-                    'User consent for app ' + app.name + ': consent=' + consent
+                    "User consent for app " + app.name + ": consent=" + consent
                 );
             },
             required: false,
@@ -168,21 +181,21 @@ var klaroConfig = {
             onlyOnce: true,
         },
         {
-            name: 'adsense',
-            title: 'Google AdSense',
+            name: "adsense",
+            title: "Google AdSense",
             default: false,
-            purposes: ['advertising'],
+            purposes: ["advertising"],
         },
         {
-            name: 'language',
-            title: 'Sprach-Einstellungen',
-            purposes: ['functional'],
+            name: "language",
+            title: "Sprach-Einstellungen",
+            purposes: ["functional"],
             required: true,
         },
         {
-            name: 'cookieconsent',
-            title: 'Cookie-Einstellungen',
-            purposes: ['functional'],
+            name: "cookieconsent",
+            title: "Cookie-Einstellungen",
+            purposes: ["functional"],
             required: true,
         },
     ],
