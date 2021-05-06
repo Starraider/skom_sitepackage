@@ -3,5 +3,6 @@
 *.ld
 
 # TYPO3-Sitepackages
+/node_modules
 .TER_Accesstokens
 
