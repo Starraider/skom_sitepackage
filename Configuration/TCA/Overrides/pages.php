@@ -1,6 +1,5 @@
 <?php
-use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
-defined('TYPO3') || die();
+defined('TYPO3_MODE') || die();
 
 call_user_func(function()
 {
@@ -12,7 +11,7 @@ call_user_func(function()
     /**
      * Default PageTS for SkomSitepackage
      */
-    ExtensionManagementUtility::registerPageTSConfigFile(
+    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::registerPageTSConfigFile(
         $extensionKey,
         'Configuration/TsConfig/Page/All.tsconfig',
         'SKom Sitepackage'
