@@ -1,4 +1,4 @@
-name: publish
+name: Publish TYPO3 extension to TER
 on:
   push:
     tags:
