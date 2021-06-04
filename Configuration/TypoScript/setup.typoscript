@@ -48,20 +48,23 @@
 page {
     10 = FLUIDTEMPLATE
     10 {
+        templateRootPaths >
         templateRootPaths {
             0 = EXT:bootstrap_package/Resources/Private/Templates/Page/
-            1 = EXT:skom_sitepackage/Resources/Private/Templates/Page/
-            2 = {$page.fluidtemplate.templateRootPath}
+            10 = EXT:skom_sitepackage/Resources/Private/Templates/Page/
+            20 = {$page.fluidtemplate.templateRootPath}
         }
+        partialRootPaths >
         partialRootPaths {
             0 = EXT:bootstrap_package/Resources/Private/Partials/Page/
-            1 = EXT:skom_sitepackage/Resources/Private/Partials/Page/
-            2 = {$page.fluidtemplate.partialRootPath}
+            10 = EXT:skom_sitepackage/Resources/Private/Partials/Page/
+            20 = {$page.fluidtemplate.partialRootPath}
         }
+        layoutRootPaths >
         layoutRootPaths {
             0 = EXT:bootstrap_package/Resources/Private/Layouts/Page/
-            1 = EXT:skom_sitepackage/Resources/Private/Layouts/Page/
-            2 = {$page.fluidtemplate.layoutRootPath}
+            10 = EXT:skom_sitepackage/Resources/Private/Layouts/Page/
+            20 = {$page.fluidtemplate.layoutRootPath}
         }
     }
     includeCSS {
