@@ -11,7 +11,6 @@
 //
 // Extensions
 //
-@import "waconcookiemanagement";
 @import "news";
 @import "klaro";
 
@@ -39,7 +38,26 @@
     padding-top: 2.5rem;
     padding-bottom: 2.5rem;
 }
-
+.frame-background-primary {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
+        color: $white !important;
+    }
+}
+$headline-scaling: () !default;
+$headline-scaling: map-merge(
+    (
+        xs: 1,
+        sm: 1,
+        md: 1,
+        lg: 1,
+        xl: 1
+    ),
+    $headline-scaling
+);
 //
 // Main Navigation
 //
@@ -119,4 +137,14 @@
             }
         }
     }
+}
+
+//
+// Cards
+//
+.card-deck .card {
+    margin-bottom: $card-deck-margin*2;
+}
+.list-meta {
+    margin-bottom: 0.5rem;
 }
