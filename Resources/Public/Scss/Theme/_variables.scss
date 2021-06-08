@@ -12,14 +12,14 @@ $color-youtube: #cd201f;
 $color-xing: #026466;
 $color-kununu: #000000;
 
-$headline-scaling: ();
+$headline-scaling: () !default;
 $headline-scaling: map-merge(
     (
-        xs: 0.8,
-        sm: 0.8,
-        md: 0.9,
+        xs: 1,
+        sm: 1,
+        md: 1,
         lg: 1,
-        xl: 1,
+        xl: 1
     ),
     $headline-scaling
 );
