@@ -9,7 +9,7 @@
   "keywords": [
     "TYPO3 CMS"
   ],
-  "version": "9.2.16",
+  "version": "9.3.0",
   "require": {
     "typo3/cms-core": "^9.5.25 || ^10.4.14",
     "bk2k/bootstrap-package": "^11.0.3"
