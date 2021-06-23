@@ -1,14 +1,14 @@
 ######################
 #### DEPENDENCIES ####
 ######################
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:bootstrap_package/Configuration/TypoScript/constants.typoscript">
+@import "EXT:bootstrap_package/Configuration/TypoScript/constants.typoscript"
 
 #############################################################
 #### EXTENSIONS                                          ####
 #### Manual inclusion to keep control over loading order ####
 #############################################################
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:skom_sitepackage/Configuration/TypoScript/Extension/WaconCookieManagement/constants.typoscript" condition="extension.isLoaded('wacon_cookie_management') == 1">
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:skom_sitepackage/Configuration/TypoScript/Extension/News/constants.typoscript" condition="extension.isLoaded('news') == 1">
+@import "EXT:skom_sitepackage/Configuration/TypoScript/Extension/WaconCookieManagement/constants.typoscript"
+@import "EXT:skom_sitepackage/Configuration/TypoScript/Extension/News/constants.typoscript"
 
 ##############################
 #### DEVELOPMENT SETTINGS ####

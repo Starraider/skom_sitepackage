@@ -1,14 +1,14 @@
 ######################
 #### DEPENDENCIES ####
 ######################
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:bootstrap_package/Configuration/TypoScript/setup.typoscript">
+@import "EXT:bootstrap_package/Configuration/TypoScript/setup.typoscript"
 
 #############################################################
 #### EXTENSIONS                                          ####
 #### Manual inclusion to keep control over loading order ####
 #############################################################
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:skom_sitepackage/Configuration/TypoScript/Extension/WaconCookieManagement/setup.typoscript"  condition="extension.isLoaded('wacon_cookie_management') == 1">
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:skom_sitepackage/Configuration/TypoScript/Extension/News/setup.typoscript" condition="extension.isLoaded('news') == 1">
+@import "EXT:skom_sitepackage/Configuration/TypoScript/Extension/WaconCookieManagement/setup.typoscript"
+@import "EXT:skom_sitepackage/Configuration/TypoScript/Extension/News/setup.typoscript"
 
 #############
 ### Debug ###
@@ -134,20 +134,8 @@ page {
     }
     includeJSFooter {
         skom_sitepackage_scripts >
-        waconcookiemanagement >
     }
 }
-# Extension JavaScript
-[userFunc = TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('wacon_cookie_management')]
-    page {
-        10 {
-            includeJSLibs {
-                waconcookiemanagement = EXT:wacon_cookie_management/Resources/Public/JavaScript/waconcookiemanagement.js
-                waconcookiemanagement.defer = 1
-            }
-        }
-    }
-[END]
 
 ######################################
 #### Enable High Resolution Images ###
