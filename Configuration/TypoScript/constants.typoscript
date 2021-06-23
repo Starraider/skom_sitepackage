@@ -91,21 +91,9 @@ page {
         backgroundColor = #eeeeee
     }
     fluidtemplate {
-        layoutRootPath >
-        layoutRootPath {
-            0 = EXT:bootstrap_package/Resources/Private/Layouts/Page/
-            1 = EXT:skom_sitepackage/Resources/Private/Layouts/Page/
-        }
-        partialRootPath >
-        partialRootPath {
-            0 = EXT:bootstrap_package/Resources/Private/Partials/Page/
-            1 = EXT:skom_sitepackage/Resources/Private/Partials/Page/
-        }
-        templateRootPath >
-        templateRootPath {
-            0 = EXT:bootstrap_package/Resources/Private/Templates/Page/
-            1 = EXT:skom_sitepackage/Resources/Private/Templates/Page/
-        }
+        layoutRootPath = EXT:skom_sitepackage/Resources/Private/Layouts/Page/
+        partialRootPath = EXT:skom_sitepackage/Resources/Private/Partials/Page/
+        templateRootPath = EXT:skom_sitepackage/Resources/Private/Templates/Page/
     }
 }
 [treeLevel = 0]
