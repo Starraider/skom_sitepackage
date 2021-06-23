@@ -7,7 +7,6 @@
 #### EXTENSIONS                                          ####
 #### Manual inclusion to keep control over loading order ####
 #############################################################
-@import "EXT:skom_sitepackage/Configuration/TypoScript/Extension/WaconCookieManagement/constants.typoscript"
 @import "EXT:skom_sitepackage/Configuration/TypoScript/Extension/News/constants.typoscript"
 
 ##############################
