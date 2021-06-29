@@ -112,6 +112,13 @@ $headline-scaling: map-merge(
 //
 // Layout
 //
+.frame {
+    &.frame-layout-1 {
+        padding: 0;
+    }
+}
+
+
 .frame-type-textpic {
     &.frame-layout-1 {
         .textpic-left,
