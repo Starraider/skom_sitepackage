@@ -8,6 +8,7 @@
 #### Manual inclusion to keep control over loading order ####
 #############################################################
 @import "EXT:skom_sitepackage/Configuration/TypoScript/Extension/News/setup.typoscript"
+@import "EXT:skom_sitepackage/Configuration/TypoScript/Extension/Container/setup.typoscript"
 
 #############
 ### Debug ###
