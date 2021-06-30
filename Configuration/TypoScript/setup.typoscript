@@ -72,13 +72,14 @@ page {
     }
     includeJSLibs {
         modernizer >
-        modernizr = EXT:bootstrap_package/Resources/Public/Contrib/modernizr/modernizr.min.js
-        modernizr {
-            forceOnTop = 1
-            defer = 1
-        }
+#        modernizr = EXT:bootstrap_package/Resources/Public/Contrib/modernizr/modernizr.min.js
+#        modernizr {
+#            forceOnTop = 1
+#            defer = 1
+#        }
         jquery = EXT:bootstrap_package/Resources/Public/Contrib/jquery/jquery.min.js
         jquery.defer = 1
+        jquery.forceOnTop = 1
         klaro_config = EXT:skom_sitepackage/Resources/Public/JavaScript/Dist/config.js
         klaro_config.defer = 1
         klaro = EXT:skom_sitepackage/Resources/Public/JavaScript/Dist/klaro.js
