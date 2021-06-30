@@ -14,32 +14,32 @@
 ### Debug ###
 #############
 [applicationContext = Production*]
-    config {
-        debug = 0
-        no_cache = 0
-        admPanel = 0
-        contentObjectExceptionHandler = 1
-        compressCss = 1
-        concatenateCss = 1
-        compressJs = 1
-        concatenateJs = 1
-        sendCacheHeaders = 1
-        cache_period = 7776000
-    }
+config {
+    debug = 0
+    no_cache = 0
+    admPanel = 0
+    contentObjectExceptionHandler = 1
+    compressCss = 1
+    concatenateCss = 1
+    compressJs = 1
+    concatenateJs = 1
+    sendCacheHeaders = 1
+    cache_period = 7776000
+}
 [end]
 [applicationContext = Development]
-    config {
-        debug = 1
-        no_cache = 1
-        admPanel = 0
-        contentObjectExceptionHandler = 0
-        compressCss = 0
-        concatenateCss = 0
-        compressJs = 0
-        concatenateJs = 0
-        sendCacheHeaders = 0
-        cache_period = 0
-    }
+config {
+    debug = 1
+    no_cache = 1
+    admPanel = 0
+    contentObjectExceptionHandler = 0
+    compressCss = 0
+    concatenateCss = 0
+    compressJs = 0
+    concatenateJs = 0
+    sendCacheHeaders = 0
+    cache_period = 0
+}
 [end]
 
 ##############
@@ -72,11 +72,11 @@ page {
     }
     includeJSLibs {
         modernizer >
-#        modernizr = EXT:bootstrap_package/Resources/Public/Contrib/modernizr/modernizr.min.js
-#        modernizr {
-#            forceOnTop = 1
-#            defer = 1
-#        }
+#       modernizr = EXT:bootstrap_package/Resources/Public/Contrib/modernizr/modernizr.min.js
+#       modernizr {
+#           forceOnTop = 1
+#           defer = 1
+#       }
         jquery = EXT:bootstrap_package/Resources/Public/Contrib/jquery/jquery.min.js
         jquery.defer = 1
         jquery.forceOnTop = 1
