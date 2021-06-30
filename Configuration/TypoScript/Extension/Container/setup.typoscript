@@ -15,3 +15,12 @@ tt_content.3col-container {
     }
     dataProcessing.13 = B13\Container\DataProcessing\ContainerProcessor
 }
+
+tt_content.section-container =< lib.contentElement
+tt_content.section-container {
+    templateName = section-container
+    templateRootPaths {
+        10 = EXT:skom_sitepackage/Resources/Private/Templates/Container
+    }
+    dataProcessing.13 = B13\Container\DataProcessing\ContainerProcessor
+}
