@@ -1,0 +1,44 @@
+tt_content.2col-container =< lib.contentElement
+tt_content.2col-container {
+    templateName = 2col-container
+    templateRootPaths {
+        10 = EXT:skom_sitepackage/Resources/Private/Templates/Container
+    }
+    dataProcessing.13 = B13\Container\DataProcessing\ContainerProcessor
+}
+
+tt_content.2col-left-container =< lib.contentElement
+tt_content.2col-left-container {
+    templateName = 2col-left-container
+    templateRootPaths {
+        10 = EXT:skom_sitepackage/Resources/Private/Templates/Container
+    }
+    dataProcessing.13 = B13\Container\DataProcessing\ContainerProcessor
+}
+
+tt_content.2col-right-container =< lib.contentElement
+tt_content.2col-right-container {
+    templateName = 2col-right-container
+    templateRootPaths {
+        10 = EXT:skom_sitepackage/Resources/Private/Templates/Container
+    }
+    dataProcessing.13 = B13\Container\DataProcessing\ContainerProcessor
+}
+
+tt_content.3col-container =< lib.contentElement
+tt_content.3col-container {
+    templateName = 3col-container
+    templateRootPaths {
+        10 = EXT:skom_sitepackage/Resources/Private/Templates/Container
+    }
+    dataProcessing.13 = B13\Container\DataProcessing\ContainerProcessor
+}
+
+tt_content.section-container =< lib.contentElement
+tt_content.section-container {
+    templateName = section-container
+    templateRootPaths {
+        10 = EXT:skom_sitepackage/Resources/Private/Templates/Container
+    }
+    dataProcessing.13 = B13\Container\DataProcessing\ContainerProcessor
+}

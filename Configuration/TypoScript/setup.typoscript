@@ -1,45 +1,45 @@
 ######################
 #### DEPENDENCIES ####
 ######################
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:bootstrap_package/Configuration/TypoScript/setup.typoscript">
+@import "EXT:bootstrap_package/Configuration/TypoScript/setup.typoscript"
 
 #############################################################
 #### EXTENSIONS                                          ####
 #### Manual inclusion to keep control over loading order ####
 #############################################################
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:skom_sitepackage/Configuration/TypoScript/Extension/WaconCookieManagement/setup.typoscript"  condition="extension.isLoaded('wacon_cookie_management') == 1">
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:skom_sitepackage/Configuration/TypoScript/Extension/News/setup.typoscript" condition="extension.isLoaded('news') == 1">
+@import "EXT:skom_sitepackage/Configuration/TypoScript/Extension/News/setup.typoscript"
+@import "EXT:skom_sitepackage/Configuration/TypoScript/Extension/Container/setup.typoscript"
 
 #############
 ### Debug ###
 #############
 [applicationContext = Production*]
-    config {
-        debug = 0
-        no_cache = 0
-        admPanel = 0
-        contentObjectExceptionHandler = 1
-        compressCss = 1
-        concatenateCss = 1
-        compressJs = 1
-        concatenateJs = 1
-        sendCacheHeaders = 1
-        cache_period = 7776000
-    }
+config {
+    debug = 0
+    no_cache = 0
+    admPanel = 0
+    contentObjectExceptionHandler = 1
+    compressCss = 1
+    concatenateCss = 1
+    compressJs = 1
+    concatenateJs = 1
+    sendCacheHeaders = 1
+    cache_period = 7776000
+}
 [end]
 [applicationContext = Development]
-    config {
-        debug = 1
-        no_cache = 1
-        admPanel = 0
-        contentObjectExceptionHandler = 0
-        compressCss = 0
-        concatenateCss = 0
-        compressJs = 0
-        concatenateJs = 0
-        sendCacheHeaders = 0
-        cache_period = 0
-    }
+config {
+    debug = 1
+    no_cache = 1
+    admPanel = 0
+    contentObjectExceptionHandler = 0
+    compressCss = 0
+    concatenateCss = 0
+    compressJs = 0
+    concatenateJs = 0
+    sendCacheHeaders = 0
+    cache_period = 0
+}
 [end]
 
 ##############
@@ -72,13 +72,14 @@ page {
     }
     includeJSLibs {
         modernizer >
-        modernizr = EXT:bootstrap_package/Resources/Public/Contrib/modernizr/modernizr.min.js
-        modernizr {
-            forceOnTop = 1
-            defer = 1
-        }
+#       modernizr = EXT:bootstrap_package/Resources/Public/Contrib/modernizr/modernizr.min.js
+#       modernizr {
+#           forceOnTop = 1
+#           defer = 1
+#       }
         jquery = EXT:bootstrap_package/Resources/Public/Contrib/jquery/jquery.min.js
         jquery.defer = 1
+        jquery.forceOnTop = 1
         klaro_config = EXT:skom_sitepackage/Resources/Public/JavaScript/Dist/config.js
         klaro_config.defer = 1
         klaro = EXT:skom_sitepackage/Resources/Public/JavaScript/Dist/klaro.js
@@ -134,20 +135,8 @@ page {
     }
     includeJSFooter {
         skom_sitepackage_scripts >
-        waconcookiemanagement >
     }
 }
-# Extension JavaScript
-[userFunc = TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('wacon_cookie_management')]
-    page {
-        10 {
-            includeJSLibs {
-                waconcookiemanagement = EXT:wacon_cookie_management/Resources/Public/JavaScript/waconcookiemanagement.js
-                waconcookiemanagement.defer = 1
-            }
-        }
-    }
-[END]
 
 ######################################
 #### Enable High Resolution Images ###

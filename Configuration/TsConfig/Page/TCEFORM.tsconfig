@@ -8,7 +8,10 @@ TCEFORM {
     }
     tt_content {
         layout {
-            removeItems = 1,2,3
+            altLabels {
+                1 = ohne Abstand
+            }
+            removeItems = 2,3
             disableNoMatchingValueElement = 1
             types {
                 uploads {

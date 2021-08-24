@@ -1,55 +1,54 @@
 ######################
 #### DEPENDENCIES ####
 ######################
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:bootstrap_package/Configuration/TypoScript/constants.typoscript">
+@import "EXT:bootstrap_package/Configuration/TypoScript/constants.typoscript"
 
 #############################################################
 #### EXTENSIONS                                          ####
 #### Manual inclusion to keep control over loading order ####
 #############################################################
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:skom_sitepackage/Configuration/TypoScript/Extension/WaconCookieManagement/constants.typoscript" condition="extension.isLoaded('wacon_cookie_management') == 1">
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:skom_sitepackage/Configuration/TypoScript/Extension/News/constants.typoscript" condition="extension.isLoaded('news') == 1">
+@import "EXT:skom_sitepackage/Configuration/TypoScript/Extension/News/constants.typoscript"
 
 ##############################
 #### DEVELOPMENT SETTINGS ####
 ##############################
 [applicationContext = Development*]
-    config {
-        no_cache = 1
-        sendCacheHeaders = 0
-        compressJs = 0
-        concatenateCss = 0
-        concatenateJs = 0
-        compressCss = 0
-        admPanel = 1
-    }
-    sourceopt {
-        formatHtml = 4
-        removeComments = 0
-    }
-    plugin {
-        tx_min.tinysource.enable = 0
-        bootstrap_package.settings.cssSourceMapping = 1
-    }
+config {
+    no_cache = 1
+    sendCacheHeaders = 0
+    compressJs = 0
+    concatenateCss = 0
+    concatenateJs = 0
+    compressCss = 0
+    admPanel = 1
+}
+sourceopt {
+    formatHtml = 4
+    removeComments = 0
+}
+plugin {
+    tx_min.tinysource.enable = 0
+    bootstrap_package.settings.cssSourceMapping = 1
+}
 [end]
 [applicationContext = Production*]
-    config {
-        no_cache = 0
-        sendCacheHeaders = 1
-        compressJs = 1
-        concatenateCss = 1
-        concatenateJs = 1
-        compressCss = 1
-        admPanel = 0
-    }
-    sourceopt {
-        formatHtml = 1
-        removeComments = 1
-    }
-    plugin {
-        tx_min.tinysource.enable = 1
-        bootstrap_package.settings.cssSourceMapping = 0
-    }
+config {
+    no_cache = 0
+    sendCacheHeaders = 1
+    compressJs = 1
+    concatenateCss = 1
+    concatenateJs = 1
+    compressCss = 1
+    admPanel = 0
+}
+sourceopt {
+    formatHtml = 1
+    removeComments = 1
+}
+plugin {
+    tx_min.tinysource.enable = 1
+    bootstrap_package.settings.cssSourceMapping = 0
+}
 [end]
 
 
@@ -92,21 +91,9 @@ page {
         backgroundColor = #eeeeee
     }
     fluidtemplate {
-        layoutRootPath >
-        layoutRootPath {
-            0 = EXT:bootstrap_package/Resources/Private/Layouts/Page/
-            1 = EXT:skom_sitepackage/Resources/Private/Layouts/Page/
-        }
-        partialRootPath >
-        partialRootPath {
-            0 = EXT:bootstrap_package/Resources/Private/Partials/Page/
-            1 = EXT:skom_sitepackage/Resources/Private/Partials/Page/
-        }
-        templateRootPath >
-        templateRootPath {
-            0 = EXT:bootstrap_package/Resources/Private/Templates/Page/
-            1 = EXT:skom_sitepackage/Resources/Private/Templates/Page/
-        }
+        layoutRootPath = EXT:skom_sitepackage/Resources/Private/Layouts/Page/
+        partialRootPath = EXT:skom_sitepackage/Resources/Private/Partials/Page/
+        templateRootPath = EXT:skom_sitepackage/Resources/Private/Templates/Page/
     }
 }
 [treeLevel = 0]
