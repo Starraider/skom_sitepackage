@@ -9,10 +9,10 @@
   "keywords": [
     "TYPO3 CMS"
   ],
-  "version": "9.3.1",
+  "version": "10.0.0",
   "require": {
-    "typo3/cms-core": "^9.5.25 || ^10.4.14",
-    "bk2k/bootstrap-package": "^11.0.3"
+    "typo3/cms-core": "^10.4.14 || ^11.3.3",
+    "bk2k/bootstrap-package": "^12.0.1"
   },
   "autoload": {
     "psr-4": {
