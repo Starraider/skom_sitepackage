@@ -75,7 +75,6 @@ page {
 #       modernizr = EXT:bootstrap_package/Resources/Public/Contrib/modernizr/modernizr.min.js
 #       modernizr {
 #           forceOnTop = 1
-#           defer = 1
 #       }
         jquery = EXT:bootstrap_package/Resources/Public/Contrib/jquery/jquery.min.js
         jquery.defer = 1
