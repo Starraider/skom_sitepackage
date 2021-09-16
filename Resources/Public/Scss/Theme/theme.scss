@@ -88,7 +88,8 @@ $headline-scaling: map-merge(
 // Carousel
 //
 .carousel-item-type-call_to_action .carousel-box {
-    background-color: transparentize($white, 15%);
+    background-color: $white;
+    --bs-text-opacity: .25;
     .carousel-item-header {
         color: $primary;
     }
