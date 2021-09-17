@@ -77,62 +77,25 @@ page {
 #           forceOnTop = 1
 #           defer = 1
 #       }
-        jquery = EXT:bootstrap_package/Resources/Public/Contrib/jquery/jquery.min.js
-        jquery.defer = 1
-        jquery.forceOnTop = 1
+#        jquery = EXT:bootstrap_package/Resources/Public/Contrib/jquery/jquery.min.js
+#        jquery.defer = 1
+#        jquery.forceOnTop = 1
         klaro_config = EXT:skom_sitepackage/Resources/Public/JavaScript/Dist/config.js
-        klaro_config.defer = 1
+#        klaro_config.defer = 1
         klaro = EXT:skom_sitepackage/Resources/Public/JavaScript/Dist/klaro.js
-        klaro.defer = 1
-        popper = EXT:bootstrap_package/Resources/Public/Contrib/popper/popper.min.js
-        popper.defer = 1
-        bootstrap = EXT:bootstrap_package/Resources/Public/Contrib/bootstrap4/js/bootstrap.min.js
-        bootstrap.defer = 1
-        hammerjs = EXT:bootstrap_package/Resources/Public/Contrib/hammerjs/hammer.min.js
-        hammerjs.defer = 1
-        photoswipe_core = EXT:bootstrap_package/Resources/Public/Contrib/photoswipe/photoswipe.min.js
-        photoswipe_core.defer = 1
-        photoswipe_ui = EXT:bootstrap_package/Resources/Public/Contrib/photoswipe/photoswipe-ui-default.min.js
-        photoswipe_ui.defer = 1
-        #### Custom Modules
-        bootstrap_accordion = EXT:bootstrap_package/Resources/Public/JavaScript/Dist/bootstrap.accordion.min.js
-        bootstrap_accordion.defer = 1
-        bootstrap_form = EXT:bootstrap_package/Resources/Public/JavaScript/Dist/bootstrap.form.min.js
-        bootstrap_form.defer = 1
-        bootstrap_swipe = EXT:bootstrap_package/Resources/Public/JavaScript/Dist/bootstrap.swipe.min.js
-        bootstrap_swipe.defer = 1
-        bootstrap_popover = EXT:bootstrap_package/Resources/Public/JavaScript/Dist/bootstrap.popover.min.js
-        bootstrap_popover.defer = 1
-        bootstrap_stickyheader = EXT:bootstrap_package/Resources/Public/JavaScript/Dist/bootstrap.stickyheader.min.js
-        bootstrap_stickyheader.defer = 1
-        bootstrap_smoothscroll = EXT:bootstrap_package/Resources/Public/JavaScript/Dist/bootstrap.smoothscroll.min.js
-        bootstrap_smoothscroll.defer = 1
-        bootstrap_lightbox = EXT:bootstrap_package/Resources/Public/JavaScript/Dist/bootstrap.lightbox.min.js
-        bootstrap_lightbox.defer = 1
-        bootstrap_navbar = EXT:bootstrap_package/Resources/Public/JavaScript/Dist/bootstrap.navbar.min.js
-        bootstrap_navbar.defer = 1
+#        klaro.defer = 1
+#        popper = EXT:bootstrap_package/Resources/Public/Contrib/popper/popper.min.js
+#        popper.defer = 1
+#        bootstrap = EXT:bootstrap_package/Resources/Public/Contrib/bootstrap5/js/bootstrap.min.js
+#        bootstrap.defer = 1
+
     }
     includeJS {
-        ajquery >
+        jquery >
         skom_sitepackage_scripts = EXT:skom_sitepackage/Resources/Public/JavaScript/Dist/scripts.js
         skom_sitepackage_scripts.defer = 1
     }
-    includeJSFooterlibs {
-        jquery >
-        popper >
-        bootstrap >
-        hammerjs >
-        photoswipe_core >
-        photoswipe_ui >
-        bootstrap_accordion >
-        bootstrap_form >
-        bootstrap_swipe >
-        bootstrap_popover >
-        bootstrap_stickyheader >
-        bootstrap_smoothscroll >
-        bootstrap_lightbox >
-        bootstrap_navbar >
-    }
+
     includeJSFooter {
         skom_sitepackage_scripts >
     }

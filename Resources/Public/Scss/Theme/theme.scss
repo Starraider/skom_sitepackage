@@ -1,7 +1,7 @@
 //
 // Import needed Bootstrap Package Files
 //
-@import "../../../../../bootstrap_package/Resources/Public/Scss/Theme/theme";
+@import "../../../../../bootstrap_package/Resources/Public/Scss/bootstrap5/theme";
 
 //
 // Variables
@@ -150,7 +150,7 @@ $headline-scaling: map-merge(
 // Cards
 //
 .card-deck .card {
-    margin-bottom: $card-deck-margin*2;
+    // margin-bottom: $card-deck-margin*2;
 }
 .list-meta {
     margin-bottom: 0.5rem;

@@ -95,7 +95,7 @@
         }
         &--float-left {
             @extend .news-detail-image;
-            @extend .float-md-left;
+            //@extend .float-md-left;
             .outer {
                 margin-bottom: 1rem;
             }
@@ -103,7 +103,7 @@
         }
         &--float-right {
             @extend .news-detail-image;
-            @extend .float-md-right;
+           // @extend .float-md-right;
             .outer {
                 margin-bottom: 1rem;
             }
