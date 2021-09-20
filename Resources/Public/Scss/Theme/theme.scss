@@ -1,8 +1,7 @@
 //
 // Import needed Bootstrap Package Files
 //
-@import "../../../../../bootstrap_package/Resources/Public/Scss/bootstrap5/theme";
-
+@import "EXT:bootstrap_package/Resources/Public/Scss/bootstrap5/theme";
 //
 // Variables
 //
@@ -88,10 +87,13 @@ $headline-scaling: map-merge(
 // Carousel
 //
 .carousel-item-type-call_to_action .carousel-box {
-    background-color: transparentize($white, 15%);
+    background-color: $white;
     .carousel-item-header {
         color: $primary;
     }
+}
+.carousel .carousel-control-icon {
+    opacity: .7;
 }
 
 //
