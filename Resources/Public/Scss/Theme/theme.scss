@@ -34,8 +34,8 @@
     background-color: $blue;
 }
 .frame {
-    padding-top: 2.5rem;
-    padding-bottom: 2.5rem;
+    //padding-top: 2.5rem;
+    //padding-bottom: 2.5rem;
 }
 .frame-background-primary {
     h1,
@@ -117,6 +117,14 @@ $headline-scaling: map-merge(
 .frame {
     &.frame-layout-1 {
         padding: 0;
+    }
+}
+.frame-layout-no-gutter {
+    .contentcontainer {
+        gap: 0;
+    }
+    &.frame-space-before-none {
+        padding-top: 0;
     }
 }
 
