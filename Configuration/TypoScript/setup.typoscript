@@ -47,6 +47,10 @@ config {
 page {
     10 = FLUIDTEMPLATE
     10 {
+        variables {
+            pageLanguage = TEXT
+            pageLanguage.data = TSFE:sys_language_uid
+        }
         templateRootPaths >
         templateRootPaths {
             0 = EXT:bootstrap_package/Resources/Private/Templates/Page/
