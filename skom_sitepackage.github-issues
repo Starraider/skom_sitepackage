@@ -1,0 +1,17 @@
+[
+  {
+    "kind": 1,
+    "language": "markdown",
+    "value": "# Open issues"
+  },
+  {
+    "kind": 2,
+    "language": "github-issues",
+    "value": "$repo=repo:Starraider/skom_sitepackage\n$whoami=Starraider"
+  },
+  {
+    "kind": 2,
+    "language": "github-issues",
+    "value": "$repo is:open assignee:$whoami"
+  }
+]
