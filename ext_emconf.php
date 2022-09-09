@@ -1,5 +1,4 @@
 <?php
-
 /**
  * Extension Manager/Repository config file for ext "skom_sitepackage".
  */
@@ -11,14 +10,13 @@ $EM_CONF[$_EXTKEY] = [
     'constraints' => [
         'depends' => [
             'typo3' => '9.5.25-10.4.99',
-            'bootstrap_package' => '11.0.3-11.99.99'
+            'bootstrap_package' => '11.0.3-11.99.99',
         ],
-        'conflicts' => [
-        ],
+        'conflicts' => [],
     ],
     'autoload' => [
         'psr-4' => [
-            'Skom\\SkomSitepackage\\' => 'Classes'
+            'Skom\\SkomSitepackage\\' => 'Classes',
         ],
     ],
     'state' => 'stable',
@@ -26,5 +24,5 @@ $EM_CONF[$_EXTKEY] = [
     'author' => 'Sven Kalbhenn',
     'author_email' => 'sven@skom.de',
     'author_company' => 'SKom',
-    'version' => '10.0.0'
+    'version' => '10.0.0',
 ];
