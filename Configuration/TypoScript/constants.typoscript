@@ -1,18 +1,18 @@
 ######################
 #### DEPENDENCIES ####
 ######################
-@import "EXT:bootstrap_package/Configuration/TypoScript/constants.typoscript"
+@import 'EXT:bootstrap_package/Configuration/TypoScript/constants.typoscript'
 
 #############################################################
 #### EXTENSIONS                                          ####
 #### Manual inclusion to keep control over loading order ####
 #############################################################
-@import "EXT:skom_sitepackage/Configuration/TypoScript/Extension/News/constants.typoscript"
+@import 'EXT:skom_sitepackage/Configuration/TypoScript/Extension/News/constants.typoscript'
 
 ##############################
 #### DEVELOPMENT SETTINGS ####
 ##############################
-[applicationContext = Development*]
+[applicationContext == "Development*"]
 config {
     no_cache = 1
     sendCacheHeaders = 0
@@ -30,8 +30,8 @@ plugin {
     tx_min.tinysource.enable = 0
     bootstrap_package.settings.cssSourceMapping = 1
 }
-[end]
-[applicationContext = Production*]
+[global]
+[applicationContext == "Production*"]
 config {
     no_cache = 0
     sendCacheHeaders = 1
@@ -49,8 +49,7 @@ plugin {
     tx_min.tinysource.enable = 1
     bootstrap_package.settings.cssSourceMapping = 0
 }
-[end]
-
+[global]
 
 
 ############
@@ -65,15 +64,8 @@ page {
         meta.navigationValue = 4,5
         copyright.text = &copy; 2020 Sven Kalbhenn
         language.enable = 1
-        # TODO: Was ist das?
-        # meta.enable
-        # TODO: In cookiebanner config auslagern
         cookieconsent.enable = 0
-        googleFont {
-            enable = 1
-            font = Gudea
-            weight = 300,400,700
-        }
+        googleFont.enable = 0
     }
     logo {
         file = EXT:skom_sitepackage/Resources/Public/Images/logo.svg
@@ -96,9 +88,9 @@ page {
         templateRootPath = EXT:skom_sitepackage/Resources/Private/Templates/Page/
     }
 }
-[treeLevel = 0]
-    page.theme.navigation.style = default-transition
-[end]
+[tree.level in [0]]
+page.theme.navigation.style = default-transition
+[global]
 ##################
 ### EXTENSIONS ###
 ##################

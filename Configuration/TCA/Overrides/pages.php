@@ -1,9 +1,9 @@
 <?php
-defined('TYPO3_MODE') || die();
+
+defined('TYPO3') || die();
 use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
 
-call_user_func(function()
-{
+call_user_func(function () {
     /**
      * Temporary variables
      */

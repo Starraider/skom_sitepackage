@@ -1,9 +1,9 @@
 <?php
-defined('TYPO3_MODE') || die();
+
+defined('TYPO3') || die();
 use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
 
-call_user_func(function()
-{
+call_user_func(function () {
     /**
      * Temporary variables
      */
@@ -12,9 +12,5 @@ call_user_func(function()
     /**
      * Default TypoScript for SkomSitepackage
      */
-    ExtensionManagementUtility::addStaticFile(
-        $extensionKey,
-        'Configuration/TypoScript',
-        'SKom Sitepackage'
-    );
+    ExtensionManagementUtility::addStaticFile($extensionKey, 'Configuration/TypoScript', 'SKom Sitepackage');
 });

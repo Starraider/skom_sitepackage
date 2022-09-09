@@ -1,18 +1,18 @@
 ######################
 #### DEPENDENCIES ####
 ######################
-@import "EXT:bootstrap_package/Configuration/TypoScript/setup.typoscript"
+@import 'EXT:bootstrap_package/Configuration/TypoScript/setup.typoscript'
 
 #############################################################
 #### EXTENSIONS                                          ####
 #### Manual inclusion to keep control over loading order ####
 #############################################################
-@import "EXT:skom_sitepackage/Configuration/TypoScript/Extension/News/setup.typoscript"
+@import 'EXT:skom_sitepackage/Configuration/TypoScript/Extension/News/setup.typoscript'
 
 #############
 ### Debug ###
 #############
-[applicationContext = Production*]
+[applicationContext == "Production*"]
 config {
     debug = 0
     no_cache = 0
@@ -25,8 +25,8 @@ config {
     sendCacheHeaders = 1
     cache_period = 7776000
 }
-[end]
-[applicationContext = Development]
+[global]
+[applicationContext == "Development"]
 config {
     debug = 1
     no_cache = 1
@@ -39,8 +39,7 @@ config {
     sendCacheHeaders = 0
     cache_period = 0
 }
-[end]
-
+[global]
 ##############
 #### PAGE ####
 ##############
@@ -49,7 +48,7 @@ page {
     10 {
         variables {
             pageLanguage = TEXT
-            pageLanguage.data = TSFE:sys_language_uid
+            pageLanguage.data = sitelanguage:languageId
         }
         templateRootPaths >
         templateRootPaths {
@@ -75,30 +74,14 @@ page {
     }
     includeJSLibs {
         modernizer >
-#       modernizr = EXT:bootstrap_package/Resources/Public/Contrib/modernizr/modernizr.min.js
-#       modernizr {
-#           forceOnTop = 1
-#           defer = 1
-#       }
-#        jquery = EXT:bootstrap_package/Resources/Public/Contrib/jquery/jquery.min.js
-#        jquery.defer = 1
-#        jquery.forceOnTop = 1
         klaro_config = EXT:skom_sitepackage/Resources/Public/JavaScript/Dist/config.js
-#        klaro_config.defer = 1
         klaro = EXT:skom_sitepackage/Resources/Public/JavaScript/Dist/klaro.js
-#        klaro.defer = 1
-#        popper = EXT:bootstrap_package/Resources/Public/Contrib/popper/popper.min.js
-#        popper.defer = 1
-#        bootstrap = EXT:bootstrap_package/Resources/Public/Contrib/bootstrap5/js/bootstrap.min.js
-#        bootstrap.defer = 1
-
     }
     includeJS {
         jquery >
         skom_sitepackage_scripts = EXT:skom_sitepackage/Resources/Public/JavaScript/Dist/scripts.js
         skom_sitepackage_scripts.defer = 1
     }
-
     includeJSFooter {
         skom_sitepackage_scripts >
     }

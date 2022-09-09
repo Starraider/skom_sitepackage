@@ -1,5 +1,4 @@
 <?php
-
 /*
  * This file is part of the package bk2k/bootstrap-package.
  *
@@ -7,7 +6,7 @@
  * LICENSE file that was distributed with this source code.
  */
 
-defined('TYPO3_MODE') || die();
+defined('TYPO3') || die();
 
 /***************
  * Add crop variants
@@ -17,27 +16,27 @@ $defaultCropSettings = [
     'allowedAspectRatios' => [
         '16:9' => [
             'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.16_9',
-            'value' => 16 / 9
+            'value' => 16 / 9,
         ],
         '4:3' => [
             'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.4_3',
-            'value' => 4 / 3
+            'value' => 4 / 3,
         ],
         '3:1' => [
             'title' => 'LLL:EXT:skom_sitepackage/Resources/Private/Language/locallang_be.xlf:ratio.wideheader',
-            'value' => 3 / 1
+            'value' => 3 / 1,
         ],
         '2:1' => [
             'title' => 'LLL:EXT:skom_sitepackage/Resources/Private/Language/locallang_be.xlf:ratio.smallheader',
-            'value' => 2 / 1
+            'value' => 2 / 1,
         ],
         '1:1' => [
             'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.1_1',
-            'value' => 1.0
+            'value' => 1.0,
         ],
         'NaN' => [
             'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.free',
-            'value' => 0.0
+            'value' => 0.0,
         ],
     ],
     'selectedRatio' => 'NaN',
@@ -46,7 +45,7 @@ $defaultCropSettings = [
         'y' => 0.0,
         'width' => 1.0,
         'height' => 1.0,
-    ]
+    ],
 ];
 $largeCropSettings = $defaultCropSettings;
 $largeCropSettings['title'] = 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:option.large';

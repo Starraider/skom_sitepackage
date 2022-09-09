@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 /*
  * This file is part of the package bk2k/bootstrap-package.
  *
@@ -17,11 +19,7 @@ $GLOBALS['TCA']['tt_content']['columns']['frame_layout'] = [
     'config' => [
         'type' => 'select',
         'renderType' => 'selectSingle',
-        'items' => [
-            ['default', 'default'],
-            ['embedded', 'embedded'],
-            ['no-gutter', 'no-gutter'],
-        ]
+        'items' => [['default', 'default'], ['embedded', 'embedded'], ['no-gutter', 'no-gutter']],
     ],
     'l10n_mode' => 'exclude',
 ];
