@@ -1,10 +1,12 @@
 // @import "../../../../../bootstrap_package/Resources/Public/Scss/Theme/theme";
+
+
 .news-list-item {
     margin-bottom: 2rem;
     .news-list-image {
         .news-image {
             @extend .img-fluid;
-            @extend .img-thumbnail;
+            //@extend .img-thumbnail;
         }
         &--left {
             @extend .news-list-image;
