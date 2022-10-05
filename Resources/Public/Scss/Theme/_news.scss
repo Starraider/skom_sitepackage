@@ -1,5 +1,23 @@
 // @import "../../../../../bootstrap_package/Resources/Public/Scss/Theme/theme";
+.news-list-view {
+    .article {
+        margin-bottom: 1rem;
 
+        .news-list-info {
+            font-size: 0.8rem;
+            color: $gray-600;
+        }
+        .news-list-teaser {
+            p {
+                font-size: 0.9rem;
+                margin-bottom: 0.5rem;
+            }
+        }
+        .news-list-more {
+            font-size: 0.9rem;
+        }
+    }
+}
 
 .news-list-item {
     margin-bottom: 2rem;
