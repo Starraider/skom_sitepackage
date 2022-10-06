@@ -2,7 +2,10 @@
 .news-list-view {
     .article {
         margin-bottom: 1rem;
-
+        .news-list-headline {
+            font-size: 1.2rem;
+            margin-top: 0.5rem;
+        }
         .news-list-info {
             font-size: 0.8rem;
             color: $gray-600;
@@ -15,6 +18,16 @@
         }
         .news-list-more {
             font-size: 0.9rem;
+        }
+    }
+}
+
+.frame-background-dark {
+    .news-list-view {
+        .article {
+            .news-list-info {
+                color: $white !important;
+            }
         }
     }
 }
